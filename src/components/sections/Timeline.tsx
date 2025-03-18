@@ -34,29 +34,29 @@ const Timeline = () => {
   const timelineSteps = [
     {
       label: "Today",
-      title: "Get started.",
+      title: "Get started in minutes.",
       items: [
-        "Connect your store in five minutes",
-        "Upload your support policy in two minutes",
-        "Deploy AI chatbot in one minute"
+        "Connect your store in less than five minutes",
+        "Import your support policy in just two minutes",
+        "Deploy your AI support chatbot in one minute"
       ]
     },
     {
       label: "Day 5",
-      title: "Get comfortable.",
+      title: "See immediate results.",
       items: [
-        "Connect to CRM, email, and 200+ apps",
-        "Set up AI knowledge base and controls",
-        "Generate custom AI responses to FAQs"
+        "Integrate with your CRM, email, and 200+ tools",
+        "Train your AI with your product knowledge base",
+        "Create custom AI responses to common questions"
       ]
     },
     {
       label: "Day 30",
-      title: "Ask why you didn't switch years ago.",
+      title: "Transform your customer experience.",
       items: [
-        "100% of customer inquiries handled automatically",
-        "Support efficiency 8.5x more efficient",
-        "Customer response time 75% faster"
+        "Automate up to 95% of routine customer inquiries",
+        "Increase support efficiency by 8.5x",
+        "Reduce customer response time by 75%"
       ]
     }
   ];
@@ -69,8 +69,8 @@ const Timeline = () => {
       
       <div className="container-custom relative z-10">
         <AnimatedCard className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Here's what you can achieve with SupportAI in just 30 days</h2>
-          <Button variant="outline" className="rounded-full">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">See Your 30-Day Journey to AI-Powered Support Success</h2>
+          <Button variant="outline" className="rounded-xl">
             Get started for free 
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
               <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
@@ -78,15 +78,21 @@ const Timeline = () => {
           </Button>
         </AnimatedCard>
 
-        {/* Timeline Steps Navigation */}
+        {/* Timeline Steps Navigation - Made more clearly clickable */}
         <div className="flex justify-between mb-4">
           {timelineSteps.map((step, index) => (
             <button
               key={index}
-              className={`px-6 py-2 rounded-md ${activeStep === index ? 'bg-white shadow-md font-medium' : 'bg-transparent'}`}
+              className={`px-6 py-3 rounded-xl transition-all duration-300 flex items-center justify-center cursor-pointer ${
+                activeStep === index 
+                ? 'bg-white shadow-md font-medium text-brand-blue' 
+                : 'bg-transparent hover:bg-white/50'
+              }`}
               onClick={() => setActiveStep(index)}
             >
-              {step.label}
+              <span className={`${activeStep === index ? 'text-brand-blue' : 'text-gray-600'}`}>
+                {step.label}
+              </span>
             </button>
           ))}
         </div>
