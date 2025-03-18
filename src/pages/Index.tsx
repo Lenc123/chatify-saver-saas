@@ -1,12 +1,54 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Hero from '@/components/sections/Hero';
+import Calculator from '@/components/sections/Calculator';
+import Features from '@/components/sections/Features';
+import SocialProof from '@/components/sections/SocialProof';
+import Integration from '@/components/sections/Integration';
+import Cta from '@/components/sections/Cta';
 
 const Index = () => {
+  useEffect(() => {
+    // Initialize animation on scroll logic
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.slide-up-animation');
+      
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        
+        // If element is in viewport
+        if(position.top < window.innerHeight * 0.9) {
+          element.classList.add('active');
+        }
+      });
+    };
+    
+    // Run once on mount
+    animateOnScroll();
+    
+    // Add scroll listener
+    window.addEventListener('scroll', animateOnScroll);
+    
+    // Clean up
+    return () => window.removeEventListener('scroll', animateOnScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-grow">
+        <Hero />
+        <Calculator />
+        <Features />
+        <SocialProof />
+        <Integration />
+        <Cta />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
