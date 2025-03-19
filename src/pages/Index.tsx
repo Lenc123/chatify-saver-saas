@@ -44,17 +44,50 @@ const Index = () => {
       
       <main className="flex-grow">
         <Hero />
-        <Calculator />
-        <Features />
-        <div className="bg-gray-50">
+        <div className="relative">
+          <img 
+            src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+            alt="Unburdend" 
+            className="absolute top-0 left-0 h-16 opacity-5 -rotate-12"
+          />
+          <Calculator />
+        </div>
+        <div className="relative">
+          <img 
+            src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+            alt="Unburdend" 
+            className="absolute top-20 right-10 h-20 opacity-5 rotate-12"
+          />
+          <Features />
+        </div>
+        <div className="bg-gray-50 relative">
+          <img 
+            src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+            alt="Unburdend" 
+            className="absolute bottom-10 left-10 h-16 opacity-5 -rotate-6"
+          />
           <SocialProof />
         </div>
         <StandsOut />
         <div className="bg-gray-50">
           <Integration />
         </div>
-        <Timeline />
-        <Pricing />
+        <div className="relative">
+          <img 
+            src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+            alt="Unburdend" 
+            className="absolute top-10 right-10 h-16 opacity-5 rotate-12"
+          />
+          <Timeline />
+        </div>
+        <div className="relative">
+          <img 
+            src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+            alt="Unburdend" 
+            className="absolute bottom-20 left-20 h-20 opacity-5 -rotate-12"
+          />
+          <Pricing />
+        </div>
         <Cta />
       </main>
       

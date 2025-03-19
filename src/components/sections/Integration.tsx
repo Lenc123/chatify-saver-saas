@@ -2,7 +2,7 @@
 import React from 'react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Zap, Database, BarChart3, MessageSquare } from 'lucide-react';
+import { CheckCircle2, Zap, Database, BarChart3, MessageSquare, CloudCog } from 'lucide-react';
 
 const steps = [
   {
@@ -27,7 +27,16 @@ const steps = [
 
 const Integration = () => {
   return (
-    <section id="integrations" className="turso-section py-24 overflow-hidden">
+    <section id="integrations" className="turso-section py-24 overflow-hidden relative">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-48 h-48 bg-brand-secondary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl"></div>
+      <img 
+        src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+        alt="Unburdend" 
+        className="absolute top-12 right-12 h-16 opacity-10 rotate-12"
+      />
+
       <div className="turso-container">
         <AnimatedCard className="text-center mb-16">
           <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-4 font-medium text-sm">
@@ -47,10 +56,15 @@ const Integration = () => {
               delay={step.delay}
               className="relative"
             >
-              <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full hover:shadow-md transition-all duration-300 hover:translate-y-[-5px]">
-                <div className="text-6xl font-bold text-brand-secondary/10 mb-6">{step.number}</div>
-                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+              <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full hover:shadow-md transition-all duration-300 hover:translate-y-[-5px] relative overflow-hidden">
+                {/* Decorative background shape */}
+                <div className="absolute -top-10 -right-10 w-20 h-20 bg-brand-secondary/5 rounded-full"></div>
+                
+                <div className="relative z-10">
+                  <div className="text-6xl font-bold text-brand-secondary/10 mb-6">{step.number}</div>
+                  <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
               </div>
               
               {index < steps.length - 1 && (
@@ -64,108 +78,150 @@ const Integration = () => {
           ))}
         </div>
 
-        {/* Platform integrations - Redesigned section */}
-        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-brand-primary to-brand-primary/90 text-white p-1">
+        {/* Platform integrations - Completely redesigned section */}
+        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-brand-primary to-brand-primary/90 p-1 shadow-xl">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMEI1QjAiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-30"></div>
           
           <div className="relative rounded-xl overflow-hidden bg-brand-primary p-8 md:p-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              {/* Platform showcase */}
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-8">Integrate with your favorite platforms</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Shopify Card */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#95BF47]">
-                          <path d="m6 6 7.5-1.5.5.5M9 10l-3 1M4 16l7 1M10 18l9-5-9-6" />
-                        </svg>
-                      </div>
-                      <h4 className="text-xl font-semibold">Shopify</h4>
+            {/* Logo overlay */}
+            <img 
+              src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+              alt="Unburdend" 
+              className="absolute opacity-5 w-1/2 right-[-10%] bottom-[-10%]"
+            />
+            
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              {/* Left column with title and CTA */}
+              <div className="lg:w-1/3">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Ready to integrate with your favorite platform</h3>
+                <p className="text-white/80 mb-8">Our AI assistant works seamlessly with leading e-commerce platforms, with more integrations coming soon.</p>
+                <Button className="w-full bg-white text-brand-primary hover:bg-white/90 rounded-lg text-base py-3 font-medium shadow-lg">
+                  Start your free trial today
+                </Button>
+              </div>
+              
+              {/* Right column with integration cards */}
+              <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
+                {/* Shopify Card */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden relative group">
+                  <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>
+                  
+                  <div className="flex items-center mb-4 relative z-10">
+                    <div className="w-12 h-12 bg-white rounded-md flex items-center justify-center mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#95BF47]">
+                        <path d="m6 6 7.5-1.5.5.5M9 10l-3 1M4 16l7 1M10 18l9-5-9-6" />
+                      </svg>
                     </div>
-                    
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm text-white/80">
-                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                        <span>Product catalog sync</span>
-                      </li>
-                      <li className="flex items-center text-sm text-white/80">
-                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                        <span>Order management</span>
-                      </li>
-                      <li className="flex items-center text-sm text-white/80">
-                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                        <span>Customer profiles</span>
-                      </li>
-                    </ul>
+                    <h4 className="text-xl font-semibold text-white">Shopify</h4>
                   </div>
                   
-                  {/* WooCommerce Card */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#7F54B3]">
-                          <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
-                          <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
-                          <path d="M12 14v2" />
-                        </svg>
-                      </div>
-                      <h4 className="text-xl font-semibold">WooCommerce</h4>
+                  <ul className="space-y-2 relative z-10">
+                    <li className="flex items-center text-sm text-white/80">
+                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                      <span>Product catalog sync</span>
+                    </li>
+                    <li className="flex items-center text-sm text-white/80">
+                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                      <span>Order management</span>
+                    </li>
+                    <li className="flex items-center text-sm text-white/80">
+                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                      <span>Customer profiles</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* WooCommerce Card */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden relative group">
+                  <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>
+                  
+                  <div className="flex items-center mb-4 relative z-10">
+                    <div className="w-12 h-12 bg-white rounded-md flex items-center justify-center mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#7F54B3]">
+                        <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+                        <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+                        <path d="M12 14v2" />
+                      </svg>
                     </div>
-                    
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm text-white/80">
-                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                        <span>WordPress integration</span>
-                      </li>
-                      <li className="flex items-center text-sm text-white/80">
-                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                        <span>Custom field support</span>
-                      </li>
-                      <li className="flex items-center text-sm text-white/80">
-                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                        <span>Multi-vendor ready</span>
-                      </li>
-                    </ul>
+                    <h4 className="text-xl font-semibold text-white">WooCommerce</h4>
+                  </div>
+                  
+                  <ul className="space-y-2 relative z-10">
+                    <li className="flex items-center text-sm text-white/80">
+                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                      <span>WordPress integration</span>
+                    </li>
+                    <li className="flex items-center text-sm text-white/80">
+                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                      <span>Custom field support</span>
+                    </li>
+                    <li className="flex items-center text-sm text-white/80">
+                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                      <span>Multi-vendor ready</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Coming Soon Card 1 */}
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/5 overflow-hidden relative group">
+                  <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full"></div>
+                  
+                  <div className="flex items-center mb-4 relative z-10">
+                    <div className="w-12 h-12 bg-white/10 rounded-md flex items-center justify-center mr-3">
+                      <CloudCog size={28} className="text-white/40" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white/60">Magento</h4>
+                      <span className="text-xs bg-white/20 px-2 py-0.5 rounded text-white">Coming Soon</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Coming Soon Card 2 */}
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/5 overflow-hidden relative group">
+                  <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full"></div>
+                  
+                  <div className="flex items-center mb-4 relative z-10">
+                    <div className="w-12 h-12 bg-white/10 rounded-md flex items-center justify-center mr-3">
+                      <CloudCog size={28} className="text-white/40" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white/60">BigCommerce</h4>
+                      <span className="text-xs bg-white/20 px-2 py-0.5 rounded text-white">Coming Soon</span>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            
+            {/* Features tiles section */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-10">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 border border-white/10 relative overflow-hidden group">
+                <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>
+                <Zap size={24} className="text-brand-accent mb-3 relative z-10" />
+                <h4 className="text-base font-semibold mb-1 text-white relative z-10">Ultra-fast setup</h4>
+                <p className="text-white/70 text-xs relative z-10">Connect in under 2 minutes</p>
+              </div>
               
-              {/* Features grid */}
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-8">Why businesses love our platform</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-                    <Zap size={22} className="text-brand-accent mb-3" />
-                    <h4 className="text-lg font-semibold mb-2">Ultra-fast setup</h4>
-                    <p className="text-white/80 text-sm">Connect and go live in under 2 minutes with zero technical skills.</p>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-                    <Database size={22} className="text-brand-accent mb-3" />
-                    <h4 className="text-lg font-semibold mb-2">Secure data</h4>
-                    <p className="text-white/80 text-sm">Enterprise-grade security with end-to-end encryption.</p>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-                    <BarChart3 size={22} className="text-brand-accent mb-3" />
-                    <h4 className="text-lg font-semibold mb-2">Rich analytics</h4>
-                    <p className="text-white/80 text-sm">Track performance and identify optimization opportunities.</p>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-                    <MessageSquare size={22} className="text-brand-accent mb-3" />
-                    <h4 className="text-lg font-semibold mb-2">Human handoff</h4>
-                    <p className="text-white/80 text-sm">Seamlessly transfer complex issues to your support team.</p>
-                  </div>
-                </div>
-                
-                <Button className="w-full mt-8 bg-white text-brand-primary hover:bg-white/90 rounded-lg text-base py-3 font-medium">
-                  Start your free trial today
-                </Button>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 border border-white/10 relative overflow-hidden group">
+                <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>
+                <Database size={24} className="text-brand-accent mb-3 relative z-10" />
+                <h4 className="text-base font-semibold mb-1 text-white relative z-10">Secure data</h4>
+                <p className="text-white/70 text-xs relative z-10">End-to-end encryption</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 border border-white/10 relative overflow-hidden group">
+                <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>
+                <BarChart3 size={24} className="text-brand-accent mb-3 relative z-10" />
+                <h4 className="text-base font-semibold mb-1 text-white relative z-10">Rich analytics</h4>
+                <p className="text-white/70 text-xs relative z-10">Track performance</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 border border-white/10 relative overflow-hidden group">
+                <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>
+                <MessageSquare size={24} className="text-brand-accent mb-3 relative z-10" />
+                <h4 className="text-base font-semibold mb-1 text-white relative z-10">Human handoff</h4>
+                <p className="text-white/70 text-xs relative z-10">For complex issues</p>
               </div>
             </div>
           </div>
