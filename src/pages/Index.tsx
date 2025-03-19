@@ -52,6 +52,7 @@ const Index = () => {
       
       <main className="flex-grow">
         <Hero />
+        <StandsOut />
         <div className="relative">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
@@ -76,7 +77,6 @@ const Index = () => {
           />
           <SocialProof />
         </div>
-        <StandsOut />
         <div className="bg-gray-50">
           <Integration />
         </div>
