@@ -51,9 +51,13 @@ const Index = () => {
       <Header />
       
       <main className="flex-grow">
-        <Hero />
-        <StandsOut />
-        <div className="relative bg-[#FEF7CD]/30">
+        <div className="bg-[rgb(0,181,176,0.05)]">
+          <Hero />
+        </div>
+        <div className="bg-[rgb(0,181,176,0.05)]">
+          <StandsOut />
+        </div>
+        <div className="relative bg-[rgb(0,181,176,0.05)]">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -61,7 +65,7 @@ const Index = () => {
           />
           <Calculator />
         </div>
-        <div className="relative bg-[#D3E4FD]/30">
+        <div className="relative bg-[rgb(0,181,176,0.05)]">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -69,7 +73,7 @@ const Index = () => {
           />
           <Features />
         </div>
-        <div className="relative">
+        <div className="relative bg-[rgb(0,181,176,0.05)]">
           <img 
             src="/lovable-uploads/1910a3f4-33d2-49b0-a33e-74089d879367.png" 
             alt="Unburdend Impact" 
@@ -87,10 +91,10 @@ const Index = () => {
           />
           <SocialProof />
         </div>
-        <div>
+        <div className="bg-[rgb(0,181,176,0.05)]">
           <Integration />
         </div>
-        <div className="relative">
+        <div className="relative bg-[rgb(0,181,176,0.05)]">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -98,7 +102,7 @@ const Index = () => {
           />
           <Timeline />
         </div>
-        <div className="relative bg-[#E5DEFF]/30">
+        <div className="relative bg-[rgb(0,181,176,0.05)]">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -106,7 +110,9 @@ const Index = () => {
           />
           <Pricing />
         </div>
-        <Cta />
+        <div className="bg-[rgb(0,181,176,0.05)]">
+          <Cta />
+        </div>
       </main>
       
       <Footer />
