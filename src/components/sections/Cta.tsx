@@ -17,10 +17,14 @@ const Cta = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-brand-accent text-white hover:bg-brand-accent/90 text-base font-medium py-6 px-8 rounded-lg">
+            <Button variant="amber" size="xl">
               Start Your Risk-Free Trial
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-base font-medium py-6 px-8 rounded-lg">
+            <Button 
+              variant="outline" 
+              size="xl"
+              className="border-white text-white hover:bg-white/10"
+            >
               Schedule a Demo
             </Button>
           </div>

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Check } from 'lucide-react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
@@ -72,7 +71,6 @@ const Pricing = () => {
             Choose the plan that works best for your business. All plans come with a 14-day free trial.
           </p>
           
-          {/* Billing Toggle */}
           <div className="flex items-center justify-center mt-8 bg-gray-100 inline-flex p-1 rounded-full">
             <button
               onClick={() => setBillingCycle('monthly')}
@@ -129,11 +127,9 @@ const Pricing = () => {
                 </div>
                 
                 <Button 
-                  size="lg" 
-                  className={cn(
-                    "w-full mb-6",
-                    plan.ctaButtonClassName || "bg-black text-white hover:bg-black/90"
-                  )}
+                  variant="amber"
+                  size="xl" 
+                  className="w-full mb-6"
                 >
                   Start Free Trial
                 </Button>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -140,7 +139,13 @@ const Calculator = () => {
               </div>
             </div>
             
-            <Button className="w-full mt-8 bg-brand-primary text-white hover:bg-brand-primary/90 rounded-lg py-3 text-base">Start Saving Now</Button>
+            <Button 
+              variant="amber" 
+              size="xl" 
+              className="w-full mt-8"
+            >
+              Start Saving Now
+            </Button>
           </AnimatedCard>
         </div>
       </div>

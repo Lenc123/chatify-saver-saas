@@ -49,7 +49,8 @@ const ComparisonItem: React.FC<ComparisonItemProps> = ({
       
       <div className="mt-6 text-center">
         <Button 
-          className="bg-[#FFB300] text-white hover:bg-[#FFB300]/90 px-8 py-6 text-lg font-medium rounded-lg shadow-lg shadow-[#FFB300]/20 hover:shadow-xl hover:shadow-[#FFB300]/30 transition-all"
+          variant="amber"
+          size="xl"
         >
           Start Your Free Trial
         </Button>
