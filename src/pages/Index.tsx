@@ -38,16 +38,20 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       
       <main className="flex-grow">
         <Hero />
         <Calculator />
         <Features />
-        <SocialProof />
+        <div className="bg-gray-50">
+          <SocialProof />
+        </div>
         <StandsOut />
-        <Integration />
+        <div className="bg-gray-50">
+          <Integration />
+        </div>
         <Timeline />
         <Cta />
       </main>

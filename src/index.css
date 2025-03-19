@@ -76,7 +76,7 @@
   }
   
   .section-padding {
-    @apply py-20 px-4 md:px-8;
+    @apply py-16 md:py-24 px-4 md:px-8;
   }
 
   .container-custom {
@@ -88,25 +88,54 @@
   }
 
   .btn-primary {
-    @apply bg-brand-primary text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] active:translate-y-[0px];
+    @apply bg-brand-primary text-white px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:bg-brand-primary/90;
   }
 
   .btn-secondary {
-    @apply bg-white text-brand-primary border border-brand-primary px-6 py-3 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] active:translate-y-[0px];
+    @apply bg-white text-brand-primary border border-brand-primary px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-50;
   }
   
   .btn-accent {
-    @apply bg-brand-accent text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] active:translate-y-[0px];
+    @apply bg-brand-accent text-white px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:bg-brand-accent/90;
   }
   
   .slide-up-animation {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
   
   .slide-up-animation.active {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Turso-inspired styling */
+  .turso-gradient {
+    @apply bg-gradient-to-r from-brand-secondary to-brand-secondary/70;
+  }
+  
+  .turso-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300;
+  }
+  
+  .turso-button {
+    @apply bg-brand-primary text-white rounded-lg px-5 py-3 font-medium hover:bg-brand-primary/90 transition-colors;
+  }
+  
+  .turso-section {
+    @apply py-16 md:py-24;
+  }
+  
+  .turso-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6;
+  }
+  
+  .turso-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+  }
+  
+  .turso-subheading {
+    @apply text-xl text-gray-600 max-w-2xl mx-auto mt-4;
   }
 }

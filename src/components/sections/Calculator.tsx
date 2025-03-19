@@ -39,24 +39,27 @@ const Calculator = () => {
   }, []);
 
   return (
-    <section id="calculator-section" className="section-padding bg-gradient-to-b from-white to-brand-lightBlue/30 relative">
-      <div className="container-custom">
-        <AnimatedCard className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Calculate Your Support Cost Savings Instantly</h2>
+    <section id="calculator-section" className="turso-section bg-white">
+      <div className="turso-container">
+        <AnimatedCard className="text-center mb-16">
+          <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-4 font-medium text-sm">
+            ROI Calculator
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Calculate Your Support Cost Savings</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             See how much you could save by implementing our AI solution for your e-commerce store.
           </p>
         </AnimatedCard>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <AnimatedCard className="glass-card rounded-2xl p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <AnimatedCard className="bg-white rounded-xl border border-gray-200 shadow-sm p-8">
             <h3 className="text-xl font-semibold mb-8">Adjust Your Parameters</h3>
             
             <div className="space-y-8">
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="font-medium text-gray-700">Number of Employees</label>
-                  <span className="font-semibold text-brand-blue">{employees}</span>
+                  <label className="font-medium text-gray-700">Number of Support Staff</label>
+                  <span className="font-semibold text-brand-secondary">{employees}</span>
                 </div>
                 <Slider 
                   value={[employees]} 
@@ -75,7 +78,7 @@ const Calculator = () => {
               <div>
                 <div className="flex justify-between mb-2">
                   <label className="font-medium text-gray-700">Hourly Rate ($)</label>
-                  <span className="font-semibold text-brand-blue">${hourlyRate}</span>
+                  <span className="font-semibold text-brand-secondary">${hourlyRate}</span>
                 </div>
                 <Slider 
                   value={[hourlyRate]} 
@@ -94,7 +97,7 @@ const Calculator = () => {
               <div>
                 <div className="flex justify-between mb-2">
                   <label className="font-medium text-gray-700">Support Hours per Week</label>
-                  <span className="font-semibold text-brand-blue">{hoursPerWeek} hrs</span>
+                  <span className="font-semibold text-brand-secondary">{hoursPerWeek} hrs</span>
                 </div>
                 <Slider 
                   value={[hoursPerWeek]} 
@@ -112,32 +115,32 @@ const Calculator = () => {
             </div>
           </AnimatedCard>
 
-          <AnimatedCard delay={200} className="glass-card rounded-2xl p-8 flex flex-col">
+          <AnimatedCard delay={200} className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 flex flex-col">
             <h3 className="text-xl font-semibold mb-8">Your Estimated Savings</h3>
             
             <div className="flex-1 space-y-6">
-              <div className="glass-effect rounded-xl p-6 border-l-4 border-gray-400">
+              <div className="bg-gray-50 rounded-lg p-6 border-l-4 border-gray-300">
                 <p className="text-gray-600 mb-1">Current Monthly Support Costs</p>
                 <p className="text-3xl font-bold text-gray-800">${currentMonthlyCost.toLocaleString()}</p>
               </div>
               
-              <div className="glass-effect rounded-xl p-6 border-l-4 border-brand-blue">
+              <div className="bg-brand-secondary/5 rounded-lg p-6 border-l-4 border-brand-secondary">
                 <p className="text-gray-600 mb-1">AI Solution Monthly Costs</p>
-                <p className="text-3xl font-bold text-brand-blue">${aiMonthlyCost.toLocaleString()}</p>
+                <p className="text-3xl font-bold text-brand-secondary">${aiMonthlyCost.toLocaleString()}</p>
               </div>
               
-              <div className="glass-effect rounded-xl p-6 border-l-4 border-brand-green">
+              <div className="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
                 <p className="text-gray-600 mb-1">Your Monthly Savings</p>
-                <p className="text-3xl font-bold text-brand-green">${monthlySavings.toLocaleString()}</p>
+                <p className="text-3xl font-bold text-green-600">${monthlySavings.toLocaleString()}</p>
               </div>
               
-              <div className="bg-gray-50 rounded-xl p-6 border border-dashed border-brand-green">
+              <div className="bg-gray-50 rounded-lg p-6 border border-dashed border-green-500">
                 <p className="text-gray-600 mb-1">Annual Savings with AI</p>
-                <p className="text-4xl font-bold text-brand-green">${annualSavings.toLocaleString()}</p>
+                <p className="text-4xl font-bold text-green-600">${annualSavings.toLocaleString()}</p>
               </div>
             </div>
             
-            <Button className="btn-primary w-full mt-8 text-base">Start Saving Now</Button>
+            <Button className="w-full mt-8 bg-brand-primary text-white hover:bg-brand-primary/90 rounded-lg py-3 text-base">Start Saving Now</Button>
           </AnimatedCard>
         </div>
       </div>

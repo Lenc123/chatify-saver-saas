@@ -17,27 +17,27 @@ const ComparisonItem: React.FC<ComparisonItemProps> = ({
   unburdend
 }) => {
   return (
-    <div className="border-t border-gray-200 py-8">
+    <div className="border-t border-gray-200 py-6">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <div className="lg:col-span-2">
-          <h3 className="text-xl font-semibold mb-2">{title}</h3>
-          <p className="text-gray-600">{description}</p>
+          <h3 className="text-lg font-semibold mb-2">{title}</h3>
+          <p className="text-gray-600 text-sm">{description}</p>
         </div>
         
         <div className="lg:col-span-1">
-          <div className="p-6 h-full bg-gray-100 rounded-xl flex flex-col justify-center items-center text-center">
-            <h4 className="text-lg font-medium mb-3">Competitors</h4>
-            <p className="text-gray-600">{competitors}</p>
+          <div className="p-4 h-full bg-gray-50 rounded-lg flex flex-col justify-center items-center text-center">
+            <h4 className="text-base font-medium mb-2 text-gray-700">Competitors</h4>
+            <p className="text-gray-600 text-sm">{competitors}</p>
           </div>
         </div>
         
         <div className="lg:col-span-1">
-          <div className="p-6 h-full bg-brand-secondary/10 border border-brand-secondary/20 rounded-xl flex flex-col justify-center items-center text-center relative">
+          <div className="p-4 h-full bg-brand-secondary/5 border border-brand-secondary/20 rounded-lg flex flex-col justify-center items-center text-center relative">
             <div className="absolute -top-3 -right-3 bg-brand-secondary text-white rounded-full p-1">
-              <CheckCircle size={18} />
+              <CheckCircle size={16} />
             </div>
-            <h4 className="text-lg font-medium mb-3 text-brand-secondary">Unburdend</h4>
-            <p className="text-gray-600">{unburdend}</p>
+            <h4 className="text-base font-medium mb-2 text-brand-secondary">Unburdend</h4>
+            <p className="text-gray-600 text-sm">{unburdend}</p>
           </div>
         </div>
       </div>
@@ -74,23 +74,19 @@ const StandsOut = () => {
   ];
 
   return (
-    <section className="section-padding bg-white relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-64 bg-brand-secondary/5 rounded-bl-full"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-64 bg-brand-accent/5 rounded-tr-full"></div>
-      
-      <div className="container-custom relative z-10">
+    <section className="turso-section">
+      <div className="turso-container">
         <AnimatedCard className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary font-medium text-sm mb-4">
+          <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-4 font-medium text-sm">
             Why Choose Unburdend
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">How Unburdend Stands Out</h2>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">How Unburdend Stands Out</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             See why Unburdend is the preferred choice for e-commerce businesses looking to revolutionize their customer support.
           </p>
         </AnimatedCard>
         
-        <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           {comparisonItems.map((item, index) => (
             <ComparisonItem
               key={index}
