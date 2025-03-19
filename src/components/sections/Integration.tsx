@@ -2,7 +2,7 @@
 import React from 'react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Zap, Database, BarChart3, MessageSquare } from 'lucide-react';
 
 const steps = [
   {
@@ -25,26 +25,15 @@ const steps = [
   }
 ];
 
-const integrations = [
-  {
-    name: "Shopify",
-    features: ["Product catalog sync", "Order management", "Customer profiles", "Automated notifications"]
-  },
-  {
-    name: "WooCommerce",
-    features: ["WordPress integration", "Custom field support", "Multi-vendor ready", "Subscription management"]
-  }
-];
-
 const Integration = () => {
   return (
-    <section id="integrations" className="turso-section">
+    <section id="integrations" className="turso-section py-24 overflow-hidden">
       <div className="turso-container">
         <AnimatedCard className="text-center mb-16">
           <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-4 font-medium text-sm">
-            Easy Setup
+            Seamless Integration
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Integrate With Your Store in Under 2 Minutes</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Integrate With Your Store in Minutes</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             No coding required. Start automating your customer support with a simple integration process.
           </p>
@@ -75,73 +64,126 @@ const Integration = () => {
           ))}
         </div>
 
-        {/* Platform integrations */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <AnimatedCard>
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full">
-              <h3 className="text-2xl font-semibold mb-6">Compatible with your favorite platforms</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {integrations.map((integration, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6 hover:border-brand-secondary transition-all duration-300">
-                    <h4 className="text-lg font-semibold mb-4 text-brand-secondary">{integration.name}</h4>
-                    <ul className="space-y-2">
-                      {integration.features.map((feature, i) => (
-                        <li key={i} className="flex items-start">
-                          <CheckCircle2 size={16} className="text-green-500 mr-2 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-              
-              <p className="text-gray-600 mt-6 text-sm">
-                Our AI solution integrates with all major e-commerce platforms and can be customized to work with your unique store setup.
-              </p>
-            </div>
-          </AnimatedCard>
+        {/* Platform integrations - Redesigned section */}
+        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-brand-primary to-brand-primary/90 text-white p-1">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMEI1QjAiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-30"></div>
           
-          <AnimatedCard delay={200}>
-            <div className="bg-brand-secondary/5 rounded-xl border border-brand-secondary/20 p-8">
-              <h3 className="text-2xl font-semibold mb-6">Ready to transform your customer support?</h3>
-              
-              <div className="space-y-5">
-                <div className="flex items-start">
-                  <div className="bg-brand-secondary/10 p-2 rounded-full mr-4 flex-shrink-0">
-                    <CheckCircle2 size={18} className="text-brand-secondary" />
+          <div className="relative rounded-xl overflow-hidden bg-brand-primary p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              {/* Platform showcase */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-8">Integrate with your favorite platforms</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Shopify Card */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#95BF47]">
+                          <path d="m6 6 7.5-1.5.5.5M9 10l-3 1M4 16l7 1M10 18l9-5-9-6" />
+                        </svg>
+                      </div>
+                      <h4 className="text-xl font-semibold">Shopify</h4>
+                    </div>
+                    
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-sm text-white/80">
+                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                        <span>Product catalog sync</span>
+                      </li>
+                      <li className="flex items-center text-sm text-white/80">
+                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                        <span>Order management</span>
+                      </li>
+                      <li className="flex items-center text-sm text-white/80">
+                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                        <span>Customer profiles</span>
+                      </li>
+                    </ul>
+                    
+                    <Button variant="link" className="mt-4 text-white hover:text-brand-secondary group p-0">
+                      Learn more <ArrowRight size={16} className="ml-1 inline group-hover:translate-x-1 transition-transform" />
+                    </Button>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">No technical skills required</h4>
-                    <p className="text-gray-600 text-sm">Simple integration with step-by-step guidance</p>
+                  
+                  {/* WooCommerce Card */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#7F54B3]">
+                          <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+                          <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+                          <path d="M12 14v2" />
+                        </svg>
+                      </div>
+                      <h4 className="text-xl font-semibold">WooCommerce</h4>
+                    </div>
+                    
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-sm text-white/80">
+                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                        <span>WordPress integration</span>
+                      </li>
+                      <li className="flex items-center text-sm text-white/80">
+                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                        <span>Custom field support</span>
+                      </li>
+                      <li className="flex items-center text-sm text-white/80">
+                        <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
+                        <span>Multi-vendor ready</span>
+                      </li>
+                    </ul>
+                    
+                    <Button variant="link" className="mt-4 text-white hover:text-brand-secondary group p-0">
+                      Learn more <ArrowRight size={16} className="ml-1 inline group-hover:translate-x-1 transition-transform" />
+                    </Button>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="bg-brand-secondary/10 p-2 rounded-full mr-4 flex-shrink-0">
-                    <CheckCircle2 size={18} className="text-brand-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">14-day free trial</h4>
-                    <p className="text-gray-600 text-sm">Full access to all features with no commitment</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-brand-secondary/10 p-2 rounded-full mr-4 flex-shrink-0">
-                    <CheckCircle2 size={18} className="text-brand-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Dedicated onboarding support</h4>
-                    <p className="text-gray-600 text-sm">Our team helps you get maximum value from day one</p>
-                  </div>
+                <div className="mt-6 flex items-center justify-between">
+                  <p className="text-white/60 text-sm">More integrations coming soon</p>
+                  <Button variant="link" className="text-white hover:text-brand-secondary group p-0">
+                    View all integrations <ArrowRight size={16} className="ml-1 inline group-hover:translate-x-1 transition-transform" />
+                  </Button>
                 </div>
               </div>
               
-              <Button className="w-full mt-8 bg-brand-primary text-white hover:bg-brand-primary/90 rounded-lg text-base py-3">Integrate Now & Start Your Free Trial</Button>
+              {/* Features grid */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-8">Why businesses love our platform</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                    <Zap size={22} className="text-brand-accent mb-3" />
+                    <h4 className="text-lg font-semibold mb-2">Ultra-fast setup</h4>
+                    <p className="text-white/80 text-sm">Connect and go live in under 2 minutes with zero technical skills.</p>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                    <Database size={22} className="text-brand-accent mb-3" />
+                    <h4 className="text-lg font-semibold mb-2">Secure data</h4>
+                    <p className="text-white/80 text-sm">Enterprise-grade security with end-to-end encryption.</p>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                    <BarChart3 size={22} className="text-brand-accent mb-3" />
+                    <h4 className="text-lg font-semibold mb-2">Rich analytics</h4>
+                    <p className="text-white/80 text-sm">Track performance and identify optimization opportunities.</p>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                    <MessageSquare size={22} className="text-brand-accent mb-3" />
+                    <h4 className="text-lg font-semibold mb-2">Human handoff</h4>
+                    <p className="text-white/80 text-sm">Seamlessly transfer complex issues to your support team.</p>
+                  </div>
+                </div>
+                
+                <Button className="w-full mt-8 bg-white text-brand-primary hover:bg-white/90 rounded-lg text-base py-3 font-medium">
+                  Start your free trial today
+                </Button>
+              </div>
             </div>
-          </AnimatedCard>
+          </div>
         </div>
       </div>
     </section>

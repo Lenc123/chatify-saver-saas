@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { PlayCircle } from 'lucide-react';
+import { PlayCircle, Sparkles, Zap, Shield } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 const Hero = () => {
@@ -16,12 +16,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="pt-24 pb-20 bg-white overflow-hidden">
+    <section className="pt-32 pb-24 bg-white overflow-hidden relative">
+      {/* Background gradient elements */}
+      <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-gradient-to-br from-brand-secondary/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-to-tl from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
+      
       <div className="turso-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-            <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-6 font-medium text-sm">
-              AI-Powered Support for E-commerce
+            <div className="flex items-center mb-6">
+              <img src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" alt="Unburdend" className="h-16 mr-3 animate-pulse-slow" />
+              <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full font-medium text-sm">
+                AI-Powered Support for E-commerce
+              </div>
             </div>
             <h1 className="turso-heading mb-6 tracking-tight">
               Automate Customer Support.
@@ -30,12 +37,30 @@ const Hero = () => {
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
               AI-powered customer support designed specifically for Shopify & WooCommerce stores. Reduce support costs by up to 70% while improving customer satisfaction.
             </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div className="flex items-center text-sm text-gray-700">
+                <Sparkles size={18} className="text-brand-secondary mr-2" />
+                <span>Advanced AI</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-700">
+                <Zap size={18} className="text-brand-secondary mr-2" />
+                <span>Ultra-fast setup</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-700">
+                <Shield size={18} className="text-brand-secondary mr-2" />
+                <span>Secure & reliable</span>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="turso-button text-base px-6 py-3">Start Your Free Trial</Button>
+              <Button className="turso-button text-base px-6 py-3 shadow-lg shadow-brand-primary/20 hover:shadow-xl hover:shadow-brand-primary/30 transition-all">
+                Start Your Free Trial
+              </Button>
               <Dialog>
                 <DialogTrigger asChild>
                   <Button variant="outline" className="bg-transparent border border-gray-300 text-gray-700 px-6 py-3 rounded-lg text-base flex items-center gap-2 hover:bg-gray-50">
-                    <PlayCircle size={20} /> Watch Demo
+                    <PlayCircle size={20} className="text-brand-secondary" /> Watch Demo
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[800px] p-0 bg-transparent border-none">
@@ -50,7 +75,11 @@ const Hero = () => {
           </div>
           
           <div className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
-            <div className="bg-white rounded-xl border border-gray-200 shadow-md relative overflow-hidden h-[500px] w-full">
+            <div className="bg-white rounded-xl border border-gray-200 shadow-lg relative overflow-hidden h-[500px] w-full">
+              {/* Decorative elements */}
+              <div className="absolute -top-16 -right-16 w-32 h-32 bg-brand-secondary/5 rounded-full"></div>
+              <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-brand-accent/5 rounded-full"></div>
+              
               <div className="absolute top-3 left-3 flex space-x-2">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>

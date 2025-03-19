@@ -22,7 +22,10 @@ const Footer = () => {
         <div className="pt-16 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <div className="text-2xl font-bold text-white mb-6">Unburdend</div>
+              <div className="flex items-center mb-6">
+                <img src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" alt="Unburdend" className="h-12 mr-3" />
+                <span className="text-2xl font-bold text-white">Unburdend</span>
+              </div>
               <p className="text-gray-400 mb-6">
                 Revolutionizing e-commerce customer support with AI-powered automation, saving time and costs while improving customer experience.
               </p>

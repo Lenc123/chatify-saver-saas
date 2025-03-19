@@ -34,18 +34,18 @@ const Header = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" className="text-2xl font-bold text-brand-blue">
-            SupportAI
+          <a href="#" className="flex items-center">
+            <img src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" alt="Unburdend" className="h-10 mr-2" />
+            <span className="text-2xl font-bold text-brand-primary">Unburdend</span>
           </a>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-gray-800 hover:text-brand-blue font-medium link-hover">Features</a>
-          <a href="#integrations" className="text-gray-800 hover:text-brand-blue font-medium link-hover">Integrations</a>
-          <a href="#pricing" className="text-gray-800 hover:text-brand-blue font-medium link-hover">Pricing</a>
-          <a href="#blog" className="text-gray-800 hover:text-brand-blue font-medium link-hover">Blog</a>
-          <a href="#login" className="text-gray-800 hover:text-brand-blue font-medium link-hover">Login</a>
+          <a href="#features" className="text-gray-800 hover:text-brand-secondary font-medium link-hover">Features</a>
+          <a href="#integrations" className="text-gray-800 hover:text-brand-secondary font-medium link-hover">Integrations</a>
+          <a href="#pricing" className="text-gray-800 hover:text-brand-secondary font-medium link-hover">Pricing</a>
+          <a href="#login" className="text-gray-800 hover:text-brand-secondary font-medium link-hover">Login</a>
           <Button className="btn-primary ml-4">Free Trial</Button>
         </nav>
 
@@ -69,35 +69,28 @@ const Header = () => {
         <nav className="flex flex-col space-y-6 items-center">
           <a 
             href="#features" 
-            className="text-gray-800 hover:text-brand-blue font-medium text-lg w-full text-center py-2"
+            className="text-gray-800 hover:text-brand-secondary font-medium text-lg w-full text-center py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Features
           </a>
           <a 
             href="#integrations" 
-            className="text-gray-800 hover:text-brand-blue font-medium text-lg w-full text-center py-2"
+            className="text-gray-800 hover:text-brand-secondary font-medium text-lg w-full text-center py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Integrations
           </a>
           <a 
             href="#pricing" 
-            className="text-gray-800 hover:text-brand-blue font-medium text-lg w-full text-center py-2"
+            className="text-gray-800 hover:text-brand-secondary font-medium text-lg w-full text-center py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Pricing
           </a>
           <a 
-            href="#blog" 
-            className="text-gray-800 hover:text-brand-blue font-medium text-lg w-full text-center py-2"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Blog
-          </a>
-          <a 
             href="#login" 
-            className="text-gray-800 hover:text-brand-blue font-medium text-lg w-full text-center py-2"
+            className="text-gray-800 hover:text-brand-secondary font-medium text-lg w-full text-center py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Login
