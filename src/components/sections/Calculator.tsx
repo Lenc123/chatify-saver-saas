@@ -12,7 +12,7 @@ const Calculator = () => {
 
   // Calculate the costs and savings
   const currentMonthlyCost = employees * hourlyRate * hoursPerWeek * 4;
-  const aiMonthlyCost = currentMonthlyCost * 0.3; // 70% cost reduction
+  const aiMonthlyCost = currentMonthlyCost * 0.3; // 70% cost reduction (keeping for calculation but not displaying)
   const monthlySavings = currentMonthlyCost - aiMonthlyCost;
   const annualSavings = monthlySavings * 12;
 
@@ -124,10 +124,7 @@ const Calculator = () => {
                 <p className="text-3xl font-bold text-gray-800">${currentMonthlyCost.toLocaleString()}</p>
               </div>
               
-              <div className="bg-brand-secondary/5 rounded-lg p-6 border-l-4 border-brand-secondary">
-                <p className="text-gray-600 mb-1">AI Solution Monthly Costs</p>
-                <p className="text-3xl font-bold text-brand-secondary">${aiMonthlyCost.toLocaleString()}</p>
-              </div>
+              {/* AI Solution Monthly Costs element completely removed */}
               
               <div className="bg-green-50 rounded-lg p-6 border-l-4 border-green-500">
                 <p className="text-gray-600 mb-1">Your Monthly Savings</p>
