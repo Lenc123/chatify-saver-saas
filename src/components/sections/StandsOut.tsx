@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Zap, Robot, Layers, Clock } from 'lucide-react';
+import { Zap, Bot, Layers, Clock } from 'lucide-react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 
 interface ComparisonItemProps {
@@ -58,7 +58,7 @@ const StandsOut = () => {
       description: "How effectively the platform uses AI to automate customer support tasks.",
       competitors: "Basic automation with limited AI capabilities and frequent human intervention needed.",
       unburdend: "Advanced AI that resolves up to 95% of routine queries with no human intervention.",
-      icon: <Robot size={24} />,
+      icon: <Bot size={24} />,
       gradient: "bg-gradient-to-r from-[#8B5CF6] to-[#D946EF]"
     },
     {
