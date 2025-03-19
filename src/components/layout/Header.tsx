@@ -46,7 +46,7 @@ const Header = () => {
           <a href="#integrations" className="text-gray-800 hover:text-brand-secondary font-medium link-hover">Integrations</a>
           <a href="#pricing" className="text-gray-800 hover:text-brand-secondary font-medium link-hover">Pricing</a>
           <a href="#login" className="text-gray-800 hover:text-brand-secondary font-medium link-hover">Login</a>
-          <Button variant="amber" size="xl">Free Trial</Button>
+          <Button>Free Trial</Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -95,9 +95,7 @@ const Header = () => {
           >
             Login
           </a>
-          <Button 
-            variant="amber"
-            size="xl" 
+          <Button
             className="w-full mt-4" 
             onClick={() => setIsMenuOpen(false)}
           >

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Zap, Bot, Layers, Clock } from 'lucide-react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
-import { Button } from '@/components/ui/button';
 
 interface ComparisonItemProps {
   title: string;
@@ -45,15 +44,6 @@ const ComparisonItem: React.FC<ComparisonItemProps> = ({
           <h4 className="text-sm font-medium mb-2 text-white uppercase tracking-wider">Unburdend</h4>
           <p className="text-white text-sm">{unburdend}</p>
         </div>
-      </div>
-      
-      <div className="mt-6 text-center">
-        <Button 
-          variant="amber"
-          size="xl"
-        >
-          Start Your Free Trial
-        </Button>
       </div>
     </div>
   );

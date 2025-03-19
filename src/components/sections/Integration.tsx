@@ -2,7 +2,7 @@
 import React from 'react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Zap, Database, BarChart3, MessageSquare, CloudCog } from 'lucide-react';
+import { CheckCircle2, Zap, Database, BarChart3, MessageSquare } from 'lucide-react';
 
 const steps = [
   {
@@ -95,7 +95,7 @@ const Integration = () => {
               <div className="lg:w-1/3">
                 <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Ready to integrate with your favorite platform</h3>
                 <p className="text-white/80 mb-8">Our AI assistant works seamlessly with leading e-commerce platforms, with more integrations coming soon.</p>
-                <Button className="w-full bg-white text-brand-primary hover:bg-white/90 rounded-lg text-base py-3 font-medium shadow-lg">
+                <Button variant="amber" size="xl" className="w-full bg-white text-brand-primary hover:bg-white/90 rounded-lg text-base py-3 font-medium shadow-lg">
                   Start your free trial today
                 </Button>
               </div>
@@ -160,36 +160,6 @@ const Integration = () => {
                       <span>Multi-vendor ready</span>
                     </li>
                   </ul>
-                </div>
-                
-                {/* Coming Soon Card 1 */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/5 overflow-hidden relative group">
-                  <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full"></div>
-                  
-                  <div className="flex items-center mb-4 relative z-10">
-                    <div className="w-12 h-12 bg-white/10 rounded-md flex items-center justify-center mr-3">
-                      <CloudCog size={28} className="text-white/40" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-white/60">Magento</h4>
-                      <span className="text-xs bg-white/20 px-2 py-0.5 rounded text-white">Coming Soon</span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Coming Soon Card 2 */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/5 overflow-hidden relative group">
-                  <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full"></div>
-                  
-                  <div className="flex items-center mb-4 relative z-10">
-                    <div className="w-12 h-12 bg-white/10 rounded-md flex items-center justify-center mr-3">
-                      <CloudCog size={28} className="text-white/40" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-white/60">BigCommerce</h4>
-                      <span className="text-xs bg-white/20 px-2 py-0.5 rounded text-white">Coming Soon</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
