@@ -67,11 +67,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors
+				// New custom brand colors
 				brand: {
-					blue: "#0EA5E9",
-					lightBlue: "#D3E4FD",
-					green: "#10B981",
+					primary: "#000000",    // Black
+					secondary: "#00B5B0",  // Teal 
+					accent: "#FFB300",     // Amber
+					bg: "#F5F5F5",         // Light Gray
+					text: "#333333",       // Dark Gray
 				}
 			},
 			borderRadius: {

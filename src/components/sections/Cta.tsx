@@ -5,11 +5,11 @@ import AnimatedCard from '@/components/ui/AnimatedCard';
 
 const Cta = () => {
   return (
-    <section className="section-padding bg-gradient-to-r from-brand-blue to-blue-600 text-white relative overflow-hidden">
+    <section className="section-padding bg-brand-primary text-white relative overflow-hidden">
       {/* Background shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-white opacity-5 animate-float"></div>
-        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white opacity-5 animate-float" style={{animationDelay: "1s"}}></div>
+        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-brand-secondary opacity-10 animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-brand-accent opacity-10 animate-float" style={{animationDelay: "1s"}}></div>
         <div className="absolute top-40 right-20 w-20 h-20 rounded-full bg-white opacity-5 animate-float" style={{animationDelay: "1.5s"}}></div>
       </div>
       
@@ -21,7 +21,7 @@ const Cta = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-white text-brand-blue hover:bg-gray-100 text-base font-medium py-6 px-8 rounded-xl">
+            <Button size="lg" className="bg-brand-accent text-white hover:bg-brand-accent/90 text-base font-medium py-6 px-8 rounded-xl">
               Start Your Risk-Free Trial
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-base font-medium py-6 px-8 rounded-xl">

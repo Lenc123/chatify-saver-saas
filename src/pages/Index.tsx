@@ -8,6 +8,7 @@ import Features from '@/components/sections/Features';
 import SocialProof from '@/components/sections/SocialProof';
 import Integration from '@/components/sections/Integration';
 import Timeline from '@/components/sections/Timeline';
+import StandsOut from '@/components/sections/StandsOut';
 import Cta from '@/components/sections/Cta';
 
 const Index = () => {
@@ -45,6 +46,7 @@ const Index = () => {
         <Calculator />
         <Features />
         <SocialProof />
+        <StandsOut />
         <Integration />
         <Timeline />
         <Cta />
