@@ -8,7 +8,7 @@ const steps = [
   {
     number: "01",
     title: "Connect your store",
-    description: "Seamlessly connect your Shopify or WooCommerce store with just a few clicks.",
+    description: "Seamlessly connect your WooCommerce store with just a few clicks.",
     delay: 0
   },
   {
@@ -27,7 +27,7 @@ const steps = [
 
 const Integration = () => {
   return (
-    <section id="integrations" className="turso-section py-24 overflow-hidden relative">
+    <section id="integrations" className="turso-section py-24 overflow-hidden relative bg-[#F6F7FF]">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-48 h-48 bg-brand-secondary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl"></div>
@@ -93,44 +93,15 @@ const Integration = () => {
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               {/* Left column with title and CTA */}
               <div className="lg:w-1/3">
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Ready to integrate with your favorite platform</h3>
-                <p className="text-white/80 mb-8">Our AI assistant works seamlessly with leading e-commerce platforms, with more integrations coming soon.</p>
-                <Button variant="amber" size="xl" className="w-full bg-white text-brand-primary hover:bg-white/90 rounded-lg text-base py-3 font-medium shadow-lg">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Ready to integrate with your WooCommerce store</h3>
+                <p className="text-white/80 mb-8">Our AI assistant works seamlessly with WooCommerce, with more integrations coming soon.</p>
+                <Button variant="amber" size="lg" className="w-full bg-white text-brand-primary hover:bg-white/90 rounded-lg text-base py-2 font-medium shadow-lg">
                   Start your free trial today
                 </Button>
               </div>
               
               {/* Right column with integration cards */}
-              <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-                {/* Shopify Card */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden relative group">
-                  <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>
-                  
-                  <div className="flex items-center mb-4 relative z-10">
-                    <div className="w-12 h-12 bg-white rounded-md flex items-center justify-center mr-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#95BF47]">
-                        <path d="m6 6 7.5-1.5.5.5M9 10l-3 1M4 16l7 1M10 18l9-5-9-6" />
-                      </svg>
-                    </div>
-                    <h4 className="text-xl font-semibold text-white">Shopify</h4>
-                  </div>
-                  
-                  <ul className="space-y-2 relative z-10">
-                    <li className="flex items-center text-sm text-white/80">
-                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                      <span>Product catalog sync</span>
-                    </li>
-                    <li className="flex items-center text-sm text-white/80">
-                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                      <span>Order management</span>
-                    </li>
-                    <li className="flex items-center text-sm text-white/80">
-                      <CheckCircle2 size={16} className="text-brand-secondary mr-2 flex-shrink-0" />
-                      <span>Customer profiles</span>
-                    </li>
-                  </ul>
-                </div>
-                
+              <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-1 gap-5 w-full">
                 {/* WooCommerce Card */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden relative group">
                   <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-white/5 rounded-full transition-all duration-500 group-hover:scale-150"></div>

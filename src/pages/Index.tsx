@@ -47,13 +47,13 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-[#F9FAFF]">
       <Header />
       
       <main className="flex-grow">
         <Hero />
         <StandsOut />
-        <div className="relative">
+        <div className="relative bg-[#FEF7CD]/30">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -61,7 +61,7 @@ const Index = () => {
           />
           <Calculator />
         </div>
-        <div className="relative">
+        <div className="relative bg-[#D3E4FD]/30">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -69,7 +69,7 @@ const Index = () => {
           />
           <Features />
         </div>
-        <div className="bg-gray-50 relative">
+        <div className="relative">
           <img 
             src="/lovable-uploads/1910a3f4-33d2-49b0-a33e-74089d879367.png" 
             alt="Unburdend Impact" 
@@ -80,9 +80,14 @@ const Index = () => {
             alt="Unburdend" 
             className="absolute bottom-10 left-10 h-16 opacity-5 -rotate-6"
           />
+          <img
+            src="/lovable-uploads/39630935-6e6c-40ca-9631-5776144614d7.png"
+            alt="Social Proof"
+            className="absolute top-1/2 right-0 h-72 opacity-5 transform translate-x-1/4 -translate-y-1/4"
+          />
           <SocialProof />
         </div>
-        <div className="bg-gray-50">
+        <div>
           <Integration />
         </div>
         <div className="relative">
@@ -93,7 +98,7 @@ const Index = () => {
           />
           <Timeline />
         </div>
-        <div className="relative">
+        <div className="relative bg-[#E5DEFF]/30">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
