@@ -2,7 +2,7 @@
 import React from 'react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, ArrowRight, Zap, Database, BarChart3, MessageSquare } from 'lucide-react';
+import { CheckCircle2, Zap, Database, BarChart3, MessageSquare } from 'lucide-react';
 
 const steps = [
   {
@@ -100,10 +100,6 @@ const Integration = () => {
                         <span>Customer profiles</span>
                       </li>
                     </ul>
-                    
-                    <Button variant="link" className="mt-4 text-white hover:text-brand-secondary group p-0">
-                      Learn more <ArrowRight size={16} className="ml-1 inline group-hover:translate-x-1 transition-transform" />
-                    </Button>
                   </div>
                   
                   {/* WooCommerce Card */}
@@ -133,18 +129,7 @@ const Integration = () => {
                         <span>Multi-vendor ready</span>
                       </li>
                     </ul>
-                    
-                    <Button variant="link" className="mt-4 text-white hover:text-brand-secondary group p-0">
-                      Learn more <ArrowRight size={16} className="ml-1 inline group-hover:translate-x-1 transition-transform" />
-                    </Button>
                   </div>
-                </div>
-                
-                <div className="mt-6 flex items-center justify-between">
-                  <p className="text-white/60 text-sm">More integrations coming soon</p>
-                  <Button variant="link" className="text-white hover:text-brand-secondary group p-0">
-                    View all integrations <ArrowRight size={16} className="ml-1 inline group-hover:translate-x-1 transition-transform" />
-                  </Button>
                 </div>
               </div>
               

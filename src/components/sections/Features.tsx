@@ -2,40 +2,40 @@
 import React from 'react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 import { 
-  MessageSquare, 
-  TruckIcon, 
-  RefreshCcw, 
-  BarChart4, 
-  LineChart
+  Bot, 
+  Package, 
+  RotateCcw, 
+  Heart, 
+  BarChart
 } from 'lucide-react';
 
 const features = [
   {
-    icon: <MessageSquare size={44} className="text-brand-secondary" />,
+    icon: <Bot size={44} className="text-brand-secondary" />,
     title: "Instant AI Responses",
     description: "Automatically handle common e-commerce questions with lightning-fast, accurate replies that delight customers.",
     delay: 0
   },
   {
-    icon: <TruckIcon size={44} className="text-brand-secondary" />,
+    icon: <Package size={44} className="text-brand-secondary" />,
     title: "Order & Tracking Automation",
     description: "Provide customers with real-time order status updates and tracking information without human intervention.",
     delay: 100
   },
   {
-    icon: <RefreshCcw size={44} className="text-brand-secondary" />,
+    icon: <RotateCcw size={44} className="text-brand-secondary" />,
     title: "Automated Returns & Refunds",
     description: "Seamlessly process returns, exchanges, and refunds according to your store policies, reducing manual workload.",
     delay: 200
   },
   {
-    icon: <BarChart4 size={44} className="text-brand-secondary" />,
+    icon: <Heart size={44} className="text-brand-secondary" />,
     title: "Sentiment Analysis & Smart Escalations",
     description: "AI recognizes customer emotions and urgency, escalating to human agents only when truly necessary.",
     delay: 300
   },
   {
-    icon: <LineChart size={44} className="text-brand-secondary" />,
+    icon: <BarChart size={44} className="text-brand-secondary" />,
     title: "Live Performance Analytics",
     description: "Real-time dashboard showing AI effectiveness, cost savings, and customer satisfaction metrics in one place.",
     delay: 400
