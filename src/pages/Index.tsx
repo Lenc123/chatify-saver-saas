@@ -71,6 +71,11 @@ const Index = () => {
         </div>
         <div className="bg-gray-50 relative">
           <img 
+            src="/lovable-uploads/1910a3f4-33d2-49b0-a33e-74089d879367.png" 
+            alt="Unburdend Impact" 
+            className="absolute top-10 left-10 h-20 opacity-5 rotate-12"
+          />
+          <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
             className="absolute bottom-10 left-10 h-16 opacity-5 -rotate-6"
