@@ -73,7 +73,7 @@ const Index = () => {
           />
           <Features />
         </div>
-        <div className="relative bg-[rgb(0,181,176,0.05)]">
+        <div className="relative">
           <img 
             src="/lovable-uploads/1910a3f4-33d2-49b0-a33e-74089d879367.png" 
             alt="Unburdend Impact" 
@@ -94,7 +94,7 @@ const Index = () => {
         <div className="bg-[rgb(0,181,176,0.05)]">
           <Integration />
         </div>
-        <div className="relative bg-[rgb(0,181,176,0.05)]">
+        <div className="relative">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 

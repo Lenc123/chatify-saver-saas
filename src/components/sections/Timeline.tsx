@@ -62,7 +62,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section className="turso-section bg-[#F2FCE2]">
+    <section className="turso-section">
       <div className="turso-container">
         <AnimatedCard className="text-center mb-12">
           <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-4 font-medium text-sm">

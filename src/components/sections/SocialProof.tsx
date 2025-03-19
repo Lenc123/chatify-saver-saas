@@ -37,7 +37,7 @@ const testimonials = [
 
 const SocialProof = () => {
   return (
-    <section className="section-padding bg-[#FDE1D3] relative overflow-hidden">
+    <section className="section-padding relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute -top-24 -left-24 w-48 h-48 bg-brand-secondary/10 rounded-full"></div>
       <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-brand-secondary/10 rounded-full"></div>
