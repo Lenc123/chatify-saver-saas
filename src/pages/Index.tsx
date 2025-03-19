@@ -9,6 +9,7 @@ import SocialProof from '@/components/sections/SocialProof';
 import Integration from '@/components/sections/Integration';
 import Timeline from '@/components/sections/Timeline';
 import StandsOut from '@/components/sections/StandsOut';
+import Pricing from '@/components/sections/Pricing';
 import Cta from '@/components/sections/Cta';
 
 const Index = () => {
@@ -53,6 +54,7 @@ const Index = () => {
           <Integration />
         </div>
         <Timeline />
+        <Pricing />
         <Cta />
       </main>
       
