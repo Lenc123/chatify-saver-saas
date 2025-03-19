@@ -34,6 +34,14 @@ const Index = () => {
     // Add scroll listener
     window.addEventListener('scroll', animateOnScroll);
     
+    // Override all button styling to use the accent color
+    document.querySelectorAll('.turso-button, .btn-primary').forEach(button => {
+      button.classList.remove('bg-brand-primary');
+      button.classList.add('bg-brand-accent');
+      button.classList.remove('hover:bg-brand-primary/90');
+      button.classList.add('hover:bg-brand-accent/90');
+    });
+    
     // Clean up
     return () => window.removeEventListener('scroll', animateOnScroll);
   }, []);
