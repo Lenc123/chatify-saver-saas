@@ -15,9 +15,9 @@ const Cta = () => {
       
       <div className="container-custom relative z-10">
         <AnimatedCard className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Transform Your Customer Support Today</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Transform Your E-commerce Support Today</h2>
           <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-            Join hundreds of e-commerce businesses that have automated support, reduced costs, and improved customer satisfaction with our AI solution.
+            Join hundreds of Shopify and WooCommerce businesses that have automated up to 95% of routine support queries while improving customer satisfaction.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">

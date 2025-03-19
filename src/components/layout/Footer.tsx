@@ -9,8 +9,6 @@ import {
   MapPin,
   Phone
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,7 +20,7 @@ const Footer = () => {
       
       <div className="container-custom relative z-10">
         <div className="pt-16 pb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold text-white mb-6">SupportAI</div>
               <p className="text-gray-400 mb-6">
@@ -42,30 +40,6 @@ const Footer = () => {
                   <Linkedin size={20} />
                 </a>
               </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a>
-                </li>
-                <li>
-                  <a href="#integrations" className="text-gray-400 hover:text-white transition-colors">Integrations</a>
-                </li>
-                <li>
-                  <a href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</a>
-                </li>
-                <li>
-                  <a href="#blog" className="text-gray-400 hover:text-white transition-colors">Blog</a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Support</a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a>
-                </li>
-              </ul>
             </div>
             
             <div>
@@ -91,22 +65,24 @@ const Footer = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-6">Subscribe to Our Newsletter</h3>
-              <p className="text-gray-400 mb-4">
-                Get the latest news and updates about AI for e-commerce.
-              </p>
-              <div className="flex flex-col space-y-3">
-                <div className="relative">
-                  <Input 
-                    type="email" 
-                    placeholder="Your email address" 
-                    className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-brand-blue"
-                  />
-                </div>
-                <Button className="bg-brand-blue hover:bg-blue-600 w-full">
-                  Subscribe
-                </Button>
-              </div>
+              <h3 className="text-lg font-semibold mb-6">Product</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a>
+                </li>
+                <li>
+                  <a href="#integrations" className="text-gray-400 hover:text-white transition-colors">Integrations</a>
+                </li>
+                <li>
+                  <a href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Support</a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

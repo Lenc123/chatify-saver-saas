@@ -34,29 +34,29 @@ const Timeline = () => {
   const timelineSteps = [
     {
       label: "Today",
-      title: "Get started in minutes.",
+      title: "Set up your AI support in minutes",
       items: [
-        "Connect your store in less than five minutes",
-        "Import your support policy in just two minutes",
-        "Deploy your AI support chatbot in one minute"
+        "Connect your store with our one-click integration",
+        "Import your support policies and product information",
+        "Deploy your AI chatbot on your storefront instantly"
       ]
     },
     {
       label: "Day 5",
-      title: "See immediate results.",
+      title: "See immediate impact on your business",
       items: [
-        "Integrate with your CRM, email, and 200+ tools",
-        "Train your AI with your product knowledge base",
-        "Create custom AI responses to common questions"
+        "Connect with your existing tools via our 200+ integrations",
+        "Customize AI responses to match your brand voice",
+        "Monitor real-time analytics on support resolution rates"
       ]
     },
     {
       label: "Day 30",
-      title: "Transform your customer experience.",
+      title: "Transform your entire customer experience",
       items: [
         "Automate up to 95% of routine customer inquiries",
-        "Increase support efficiency by 8.5x",
-        "Reduce customer response time by 75%"
+        "Reduce support costs by up to 70%",
+        "Free up your team to focus on growth, not support tickets"
       ]
     }
   ];
@@ -83,7 +83,7 @@ const Timeline = () => {
           {timelineSteps.map((step, index) => (
             <button
               key={index}
-              className={`px-6 py-3 rounded-xl transition-all duration-300 flex items-center justify-center cursor-pointer ${
+              className={`px-6 py-3 rounded-xl transition-all duration-300 flex items-center justify-center cursor-pointer relative ${
                 activeStep === index 
                 ? 'bg-white shadow-md font-medium text-brand-blue' 
                 : 'bg-transparent hover:bg-white/50'
@@ -93,6 +93,9 @@ const Timeline = () => {
               <span className={`${activeStep === index ? 'text-brand-blue' : 'text-gray-600'}`}>
                 {step.label}
               </span>
+              {activeStep === index && (
+                <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-brand-blue rounded-full"></span>
+              )}
             </button>
           ))}
         </div>
