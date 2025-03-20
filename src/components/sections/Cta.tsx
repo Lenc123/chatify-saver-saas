@@ -1,13 +1,12 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 
 const Cta = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-brand-primary to-[#221F26] text-white relative overflow-hidden">
-      <div className="absolute -top-24 right-0 w-64 h-64 rounded-full bg-[#0FA0CE] opacity-10 blur-2xl"></div>
-      <div className="absolute -bottom-32 -left-16 w-64 h-64 rounded-full bg-[#8B5CF6] opacity-10 blur-2xl"></div>
+    <section id="cta" className="py-24 bg-black text-white relative overflow-hidden">
+      <div className="absolute -top-24 right-0 w-64 h-64 rounded-full bg-[#FFB300] opacity-10 blur-2xl"></div>
+      <div className="absolute -bottom-32 -left-16 w-64 h-64 rounded-full bg-[#FFB300] opacity-10 blur-2xl"></div>
       
       <div className="turso-container relative z-10">
         <AnimatedCard className="text-center max-w-3xl mx-auto">
@@ -17,13 +16,15 @@ const Cta = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="amber" size="lg" className="rounded-md px-5 py-2">
+            <Button 
+              className="bg-[#FFB300] hover:bg-[#FFB300]/90 text-white rounded-md px-5 py-3 w-full sm:w-auto"
+              size="lg"
+            >
               Start Your Risk-Free Trial
             </Button>
             <Button 
-              variant="outline" 
+              className="border border-white bg-transparent hover:bg-white/10 text-white rounded-md px-5 py-3 w-full sm:w-auto"
               size="lg"
-              className="border-white text-black hover:bg-white/10 rounded-md px-5 py-2"
             >
               Schedule a Demo
             </Button>
