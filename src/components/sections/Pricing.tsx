@@ -1,150 +1,196 @@
 import React, { useState } from 'react';
 import { Check } from 'lucide-react';
-import AnimatedCard from '@/components/ui/AnimatedCard';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import AnimatedCard from '@/components/ui/AnimatedCard';
 
-type PricingPlan = {
-  title: string;
-  description: string;
+interface PricingTierProps {
+  name: string;
   price: string;
+  description: string;
   features: string[];
   isPopular?: boolean;
-  ctaButtonClassName?: string;
+  cta: string;
+  delay?: number;
+}
+
+const PricingTier: React.FC<PricingTierProps> = ({ 
+  name, 
+  price, 
+  description, 
+  features, 
+  isPopular = false,
+  cta,
+  delay = 0
+}) => {
+  return (
+    <AnimatedCard delay={delay}>
+      <div className={`h-full flex flex-col rounded-xl border ${isPopular ? 'border-[#FFB300]' : 'border-gray-200'} shadow-sm overflow-hidden bg-white`}>
+        {isPopular && (
+          <div className="bg-[#FFB300] text-white text-center text-sm font-medium py-1.5">
+            Most Popular
+          </div>
+        )}
+        
+        <div className={`flex-1 p-6 sm:p-8 ${isPopular ? 'pt-6' : 'pt-8'}`}>
+          <div className="flex flex-col">
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
+            <p className="text-gray-600 mb-6">{description}</p>
+            
+            <div className="mb-6">
+              <span className="text-4xl font-bold text-gray-900">{price}</span>
+              {price !== 'Custom' && (
+                <span className="text-gray-500 ml-2">/month</span>
+              )}
+            </div>
+            
+            <div className="space-y-4 mb-8">
+              {features.map((feature, index) => (
+                <div key={index} className="flex">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#FFB300]/10 flex items-center justify-center mr-3 mt-0.5">
+                    <Check className="h-3 w-3 text-[#FFB300]" />
+                  </div>
+                  <span className="text-gray-700">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="mt-auto">
+            <Button 
+              variant={isPopular ? "amber" : "outline"} 
+              className={`w-full ${isPopular ? 'shadow-lg hover:shadow-xl transition-shadow' : ''}`}
+              size="lg"
+            >
+              {cta}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </AnimatedCard>
+  );
 };
 
 const Pricing = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
-
-  const pricingPlans: PricingPlan[] = [
+  const [isAnnual, setIsAnnual] = useState(true);
+  
+  const pricingTiers = [
     {
-      title: 'Starter',
-      description: 'Perfect for new stores with growing support needs',
-      price: billingCycle === 'monthly' ? '$49' : '$39',
+      name: "Starter",
+      price: isAnnual ? "$49" : "$79",
+      description: "Perfect for small online stores just getting started with AI support.",
       features: [
-        'AI support bot',
-        'Up to 500 conversations/month',
-        'Basic analytics',
-        'Email integration',
-        '8-hour support'
-      ]
+        "Up to 500 AI-handled support inquiries/mo",
+        "Email & chat support channels",
+        "Basic store integrations",
+        "Standard response templates",
+        "24-hour support ticket resolution"
+      ],
+      cta: "Start Free Trial",
+      delay: 0
     },
     {
-      title: 'Growth',
-      description: 'Ideal for established stores looking to scale',
-      price: billingCycle === 'monthly' ? '$99' : '$79',
+      name: "Growth",
+      price: isAnnual ? "$149" : "$199",
+      description: "Ideal for growing e-commerce businesses with increasing support needs.",
       features: [
-        'Everything in Starter',
-        'Up to 2,000 conversations/month',
-        'Advanced analytics',
-        'Shopify/WooCommerce integration',
-        'Custom training',
-        'Priority support'
+        "Up to 2,500 AI-handled support inquiries/mo",
+        "All channels including social media",
+        "Premium store & CRM integrations",
+        "Custom response templates",
+        "8-hour support ticket resolution",
+        "Priority support"
       ],
       isPopular: true,
-      ctaButtonClassName: 'bg-brand-secondary text-white hover:bg-brand-secondary/90'
+      cta: "Start Free Trial",
+      delay: 100
     },
     {
-      title: 'Pro',
-      description: 'For high-volume stores with complex needs',
-      price: billingCycle === 'monthly' ? '$199' : '$159',
+      name: "Enterprise",
+      price: "Custom",
+      description: "Tailored solutions for large e-commerce operations with complex needs.",
       features: [
-        'Everything in Growth',
-        'Unlimited conversations',
-        'Advanced integrations',
-        'Custom AI training',
-        'Dedicated account manager',
-        '24/7 priority support'
-      ]
+        "Unlimited AI-handled support inquiries",
+        "All channels with custom integrations",
+        "Advanced analytics & reporting",
+        "AI training with your historical data",
+        "4-hour support ticket resolution",
+        "Dedicated account manager",
+        "Custom AI model fine-tuning"
+      ],
+      cta: "Contact Sales",
+      delay: 200
     }
   ];
 
   return (
-    <section id="pricing" className="turso-section bg-white">
+    <section className="py-16 sm:py-20 relative overflow-hidden bg-[#F9FAFF]">
+      {/* Background elements */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-20 left-10 w-60 h-60 bg-[#FFB300]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#FFB300]/5 rounded-full blur-3xl"></div>
+      </div>
+      
       <div className="turso-container">
-        <AnimatedCard className="text-center mb-16">
-          <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-4 font-medium text-sm">
-            Pricing
+        <AnimatedCard className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-block px-3 py-1 bg-[#FFB300]/10 text-[#FFB300] rounded-full mb-4 font-medium text-sm">
+            Simple Pricing
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, transparent pricing</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">Choose the Perfect <span className="text-[#FFB300]">Plan</span></h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that works best for your business. All plans come with a 14-day free trial.
+            Transparent pricing with no hidden fees. All plans include our core AI support platform with a 14-day free trial.
           </p>
           
-          <div className="flex items-center justify-center mt-8 bg-gray-100 inline-flex p-1 rounded-full">
-            <button
-              onClick={() => setBillingCycle('monthly')}
-              className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-colors",
-                billingCycle === 'monthly' 
-                  ? 'bg-white shadow-sm text-brand-text' 
-                  : 'text-gray-500 hover:text-gray-700'
-              )}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setBillingCycle('annual')}
-              className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2",
-                billingCycle === 'annual' 
-                  ? 'bg-white shadow-sm text-brand-text' 
-                  : 'text-gray-500 hover:text-gray-700'
-              )}
-            >
-              Annual <span className="text-brand-secondary font-semibold text-xs">Save 20%</span>
-            </button>
+          <div className="flex justify-center mt-8">
+            <div className="bg-white p-1 rounded-lg shadow-sm inline-flex border border-gray-200">
+              <button
+                onClick={() => setIsAnnual(true)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isAnnual 
+                    ? 'bg-[#FFB300] text-white' 
+                    : 'text-gray-500 hover:text-gray-800'
+                }`}
+              >
+                Annual (20% off)
+              </button>
+              <button
+                onClick={() => setIsAnnual(false)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  !isAnnual 
+                    ? 'bg-[#FFB300] text-white' 
+                    : 'text-gray-500 hover:text-gray-800'
+                }`}
+              >
+                Monthly
+              </button>
+            </div>
           </div>
         </AnimatedCard>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {pricingPlans.map((plan, index) => (
-            <AnimatedCard 
-              key={index} 
-              delay={index * 100}
-              className={cn(
-                "rounded-2xl border",
-                plan.isPopular 
-                  ? "border-brand-secondary relative overflow-hidden" 
-                  : "border-gray-200"
-              )}
-            >
-              {plan.isPopular && (
-                <div className="absolute top-0 right-0">
-                  <div className="bg-brand-secondary text-white py-1 px-4 text-sm font-medium">
-                    Popular
-                  </div>
-                </div>
-              )}
-              
-              <div className="p-6">
-                <h3 className="text-2xl font-bold">{plan.title}</h3>
-                <p className="text-gray-600 mt-2 h-12">{plan.description}</p>
-                
-                <div className="mt-6 mb-6">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-gray-500 ml-2">/month</span>
-                </div>
-                
-                <Button 
-                  variant="amber"
-                  size="xl" 
-                  className="w-full mb-6"
-                >
-                  Start Free Trial
-                </Button>
-                
-                <ul className="space-y-4">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <Check size={18} className="text-brand-secondary mt-1 mr-2 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimatedCard>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          {pricingTiers.map((tier, index) => (
+            <PricingTier
+              key={index}
+              name={tier.name}
+              price={tier.price}
+              description={tier.description}
+              features={tier.features}
+              isPopular={tier.isPopular}
+              cta={tier.cta}
+              delay={tier.delay}
+            />
           ))}
+        </div>
+        
+        <div className="mt-12 sm:mt-16 text-center">
+          <AnimatedCard delay={300} className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 sm:p-8 max-w-3xl mx-auto">
+            <h3 className="text-xl font-bold mb-4">Need a custom solution?</h3>
+            <p className="text-gray-600 mb-6">
+              Our enterprise plans can be tailored to your specific needs. Contact our sales team for a personalized demo and quote.
+            </p>
+            <Button variant="outline" className="min-w-[200px]">
+              Contact Sales Team
+            </Button>
+          </AnimatedCard>
         </div>
       </div>
     </section>

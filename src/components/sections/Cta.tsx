@@ -23,7 +23,7 @@ const Cta = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="border-white text-white hover:bg-white/10 rounded-md px-5 py-2"
+              className="border-white text-black hover:bg-white/10 rounded-md px-5 py-2"
             >
               Schedule a Demo
             </Button>

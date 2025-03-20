@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -6,11 +5,11 @@ import Hero from '@/components/sections/Hero';
 import Calculator from '@/components/sections/Calculator';
 import Features from '@/components/sections/Features';
 import SocialProof from '@/components/sections/SocialProof';
-import Integration from '@/components/sections/Integration';
+// import Integration from '@/components/sections/Integration';
 import Timeline from '@/components/sections/Timeline';
 import StandsOut from '@/components/sections/StandsOut';
-import Pricing from '@/components/sections/Pricing';
 import Cta from '@/components/sections/Cta';
+import Journey from '@/components/sections/Journey';
 
 const Index = () => {
   useEffect(() => {
@@ -51,13 +50,13 @@ const Index = () => {
       <Header />
       
       <main className="flex-grow">
-        <div className="bg-[rgb(0,181,176,0.05)]">
+        <div id="home" className="bg-[rgb(0,181,176,0.05)]">
           <Hero />
         </div>
-        <div className="bg-[rgb(0,181,176,0.05)]">
+        <div id="benefits" className="bg-[rgb(0,181,176,0.05)]">
           <StandsOut />
         </div>
-        <div className="relative bg-[rgb(0,181,176,0.05)]">
+        <div id="calculator" className="relative bg-[rgb(0,181,176,0.05)]">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -65,7 +64,7 @@ const Index = () => {
           />
           <Calculator />
         </div>
-        <div className="relative bg-[rgb(0,181,176,0.05)]">
+        <div id="features" className="relative bg-[rgb(0,181,176,0.05)]">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -73,7 +72,7 @@ const Index = () => {
           />
           <Features />
         </div>
-        <div className="relative">
+        <div id="social-proof" className="relative">
           <img 
             src="/lovable-uploads/1910a3f4-33d2-49b0-a33e-74089d879367.png" 
             alt="Unburdend Impact" 
@@ -91,10 +90,25 @@ const Index = () => {
           />
           <SocialProof />
         </div>
+        {/* Integration section removed 
         <div className="bg-[rgb(0,181,176,0.05)]">
           <Integration />
         </div>
-        <div className="relative">
+        */}
+        <div id="journey" className="relative">
+          <img 
+            src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
+            alt="Unburdend" 
+            className="absolute top-10 left-10 h-16 opacity-5 rotate-12"
+          />
+          <img 
+            src="/lovable-uploads/1910a3f4-33d2-49b0-a33e-74089d879367.png" 
+            alt="Unburdend Impact" 
+            className="absolute bottom-10 right-10 h-20 opacity-5 -rotate-6"
+          />
+          <Journey />
+        </div>
+        <div id="timeline" className="relative">
           <img 
             src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
             alt="Unburdend" 
@@ -102,15 +116,7 @@ const Index = () => {
           />
           <Timeline />
         </div>
-        <div className="relative bg-[rgb(0,181,176,0.05)]">
-          <img 
-            src="/lovable-uploads/ae56c5ec-62a5-460d-ba2b-5e56bbe0d297.png" 
-            alt="Unburdend" 
-            className="absolute bottom-20 left-20 h-20 opacity-5 -rotate-12"
-          />
-          <Pricing />
-        </div>
-        <div className="bg-[rgb(0,181,176,0.05)]">
+        <div id="cta" className="bg-[rgb(0,181,176,0.05)]">
           <Cta />
         </div>
       </main>

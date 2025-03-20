@@ -113,19 +113,19 @@ const SocialProof = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 relative z-10">
             <AnimatedCard delay={50} className="bg-gradient-to-b from-white to-[#F1F0FB] rounded-xl p-8 shadow-lg text-center transform transition-all duration-300 hover:scale-105">
               <h3 className="text-5xl font-bold text-brand-primary mb-2">83%</h3>
-              <p className="text-brand-secondary font-medium mb-2">Support inquiries automated</p>
+              <p className="text-[#FFB300] font-medium mb-2">Support inquiries automated</p>
               <p className="text-gray-600 text-sm">Let AI handle routine questions while you focus on growth</p>
             </AnimatedCard>
             
             <AnimatedCard delay={100} className="bg-gradient-to-b from-white to-[#F1F0FB] rounded-xl p-8 shadow-lg text-center transform transition-all duration-300 hover:scale-105">
-              <h3 className="text-5xl font-bold text-brand-primary mb-2">$1,500+</h3>
-              <p className="text-brand-secondary font-medium mb-2">Average monthly cost savings</p>
+              <h3 className="text-5xl font-bold text-brand-primary mb-2">$12,500+</h3>
+              <p className="text-[#FFB300] font-medium mb-2">Average monthly cost savings</p>
               <p className="text-gray-600 text-sm">Reduce support staff expenses while improving service</p>
             </AnimatedCard>
             
             <AnimatedCard delay={150} className="bg-gradient-to-b from-white to-[#F1F0FB] rounded-xl p-8 shadow-lg text-center transform transition-all duration-300 hover:scale-105">
-              <h3 className="text-5xl font-bold text-brand-primary mb-2">40%</h3>
-              <p className="text-brand-secondary font-medium mb-2">Increase in customer satisfaction</p>
+              <h3 className="text-5xl font-bold text-brand-primary mb-2">43%</h3>
+              <p className="text-[#FFB300] font-medium mb-2">Increase in customer satisfaction</p>
               <p className="text-gray-600 text-sm">Faster responses lead to happier customers and more sales</p>
             </AnimatedCard>
           </div>

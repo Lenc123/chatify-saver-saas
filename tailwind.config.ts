@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,7 +70,7 @@ export default {
 				brand: {
 					primary: "#000000",    // Black
 					secondary: "#00B5B0",  // Teal 
-					accent: "#FFB300",     // Amber
+					accent: "#008080",     // Teal (was Amber)
 					bg: "#F5F5F5",         // Light Gray
 					text: "#333333",       // Dark Gray
 				}

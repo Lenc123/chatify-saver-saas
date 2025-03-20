@@ -1,70 +1,80 @@
-
 import React from 'react';
+import { Bot, Zap, Globe, BarChart } from 'lucide-react';
 import AnimatedCard from '@/components/ui/AnimatedCard';
-import { 
-  Bot, 
-  Package, 
-  RotateCcw, 
-  Heart, 
-  BarChart
-} from 'lucide-react';
 
-const features = [
-  {
-    icon: <Bot size={44} className="text-brand-secondary" />,
-    title: "Instant AI Responses",
-    description: "Automatically handle common e-commerce questions with lightning-fast, accurate replies that delight customers.",
-    delay: 0
-  },
-  {
-    icon: <Package size={44} className="text-brand-secondary" />,
-    title: "Order & Tracking Automation",
-    description: "Provide customers with real-time order status updates and tracking information without human intervention.",
-    delay: 100
-  },
-  {
-    icon: <RotateCcw size={44} className="text-brand-secondary" />,
-    title: "Automated Returns & Refunds",
-    description: "Seamlessly process returns, exchanges, and refunds according to your store policies, reducing manual workload.",
-    delay: 200
-  },
-  {
-    icon: <Heart size={44} className="text-brand-secondary" />,
-    title: "Sentiment Analysis & Smart Escalations",
-    description: "AI recognizes customer emotions and urgency, escalating to human agents only when truly necessary.",
-    delay: 300
-  },
-  {
-    icon: <BarChart size={44} className="text-brand-secondary" />,
-    title: "Live Performance Analytics",
-    description: "Real-time dashboard showing AI effectiveness, cost savings, and customer satisfaction metrics in one place.",
-    delay: 400
-  }
-];
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  delay?: number;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, delay = 0 }) => {
+  return (
+    <AnimatedCard delay={delay} className="h-full">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 h-full flex flex-col">
+        <div className="w-12 h-12 rounded-lg bg-[#FFB300]/10 flex items-center justify-center mb-5">
+          {icon}
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+        <p className="text-gray-600">{description}</p>
+      </div>
+    </AnimatedCard>
+  );
+};
 
 const Features = () => {
+  const features = [
+    {
+      icon: <Bot className="w-6 h-6 text-[#FFB300]" />,
+      title: "AI-Powered Support",
+      description: "Our advanced AI understands context, history, and nuance to provide human-like support for your customers.",
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-[#FFB300]" />,
+      title: "Lightning-Fast Setup",
+      description: "Get up and running in minutes, not weeks. No coding required—just connect your store and customize your bot.",
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-[#FFB300]" />,
+      title: "Multi-Channel Support",
+      description: "Provide consistent support across email, chat, social media, and more—all managed from a single platform.",
+    },
+    {
+      icon: <BarChart className="w-6 h-6 text-[#FFB300]" />,
+      title: "Advanced Analytics",
+      description: "Gain insights into customer issues, resolution rates, and satisfaction scores to continuously improve.",
+    }
+  ];
+
   return (
-    <section id="features" className="turso-section bg-white">
+    <section className="py-16 sm:py-20 relative overflow-hidden bg-white">
+      {/* Background elements */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-20 w-60 h-60 bg-[#FFB300]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-40 h-40 bg-[#FFB300]/10 rounded-full blur-3xl"></div>
+      </div>
+
       <div className="turso-container">
-        <AnimatedCard className="text-center mb-16">
-          <div className="inline-block px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full mb-4 font-medium text-sm">
+        <AnimatedCard className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-block px-3 py-1 bg-[#FFB300]/10 text-[#FFB300] rounded-full mb-4 font-medium text-sm">
             Key Features
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful AI Features for E-Commerce Support</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">Everything You Need for <span className="text-[#FFB300]">Exceptional</span> Support</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered platform is designed specifically for e-commerce businesses, handling customer inquiries effortlessly.
+            Our platform combines cutting-edge AI with intuitive design to deliver a complete customer support solution for e-commerce businesses.
           </p>
         </AnimatedCard>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {features.map((feature, index) => (
-            <AnimatedCard key={index} delay={feature.delay} className="turso-card p-8 hover:translate-y-[-5px] group">
-              <div className="p-3 bg-brand-secondary/10 rounded-lg inline-block mb-6 group-hover:bg-brand-secondary/20 transition-colors duration-300">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </AnimatedCard>
+            <FeatureCard 
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+              delay={index * 100}
+            />
           ))}
         </div>
       </div>
