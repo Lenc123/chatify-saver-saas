@@ -24,9 +24,9 @@ const PricingTier: React.FC<PricingTierProps> = ({
 }) => {
   return (
     <AnimatedCard delay={delay}>
-      <div className={`h-full flex flex-col rounded-xl border ${isPopular ? 'border-[#FFB300]' : 'border-gray-200'} shadow-sm overflow-hidden bg-white`}>
+      <div className={`h-full flex flex-col rounded-xl border ${isPopular ? 'border-[#008080]' : 'border-gray-200'} shadow-sm overflow-hidden bg-white`}>
         {isPopular && (
-          <div className="bg-[#FFB300] text-white text-center text-sm font-medium py-1.5">
+          <div className="bg-[#008080] text-white text-center text-sm font-medium py-1.5">
             Most Popular
           </div>
         )}
@@ -46,8 +46,8 @@ const PricingTier: React.FC<PricingTierProps> = ({
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#FFB300]/10 flex items-center justify-center mr-3 mt-0.5">
-                    <Check className="h-3 w-3 text-[#FFB300]" />
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#008080]/10 flex items-center justify-center mr-3 mt-0.5">
+                    <Check className="h-3 w-3 text-[#008080]" />
                   </div>
                   <span className="text-gray-700">{feature}</span>
                 </div>
@@ -57,7 +57,7 @@ const PricingTier: React.FC<PricingTierProps> = ({
           
           <div className="mt-auto">
             <Button 
-              variant={isPopular ? "amber" : "outline"} 
+              variant={isPopular ? "teal" : "outline"} 
               className={`w-full ${isPopular ? 'shadow-lg hover:shadow-xl transition-shadow' : ''}`}
               size="lg"
             >
@@ -126,16 +126,16 @@ const Pricing = () => {
     <section className="py-16 sm:py-20 relative overflow-hidden bg-[#F9FAFF]">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-20 left-10 w-60 h-60 bg-[#FFB300]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#FFB300]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-60 h-60 bg-[#008080]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#008080]/5 rounded-full blur-3xl"></div>
       </div>
       
       <div className="turso-container">
         <AnimatedCard className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-          <div className="inline-block px-3 py-1 bg-[#FFB300]/10 text-[#FFB300] rounded-full mb-4 font-medium text-sm">
+          <div className="inline-block px-3 py-1 bg-[#008080]/10 text-[#008080] rounded-full mb-4 font-medium text-sm">
             Simple Pricing
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">Choose the Perfect <span className="text-[#FFB300]">Plan</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">Choose the Perfect <span className="text-[#008080]">Plan</span></h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Transparent pricing with no hidden fees. All plans include our core AI support platform with a 14-day free trial.
           </p>
@@ -146,7 +146,7 @@ const Pricing = () => {
                 onClick={() => setIsAnnual(true)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   isAnnual 
-                    ? 'bg-[#FFB300] text-white' 
+                    ? 'bg-[#008080] text-white' 
                     : 'text-gray-500 hover:text-gray-800'
                 }`}
               >
@@ -156,7 +156,7 @@ const Pricing = () => {
                 onClick={() => setIsAnnual(false)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   !isAnnual 
-                    ? 'bg-[#FFB300] text-white' 
+                    ? 'bg-[#008080] text-white' 
                     : 'text-gray-500 hover:text-gray-800'
                 }`}
               >
