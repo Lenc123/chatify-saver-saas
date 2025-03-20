@@ -10,12 +10,12 @@ interface JourneyItemProps {
 
 const JourneyItem: React.FC<JourneyItemProps> = ({ title, items, isActive }) => {
   return (
-    <div className={`bg-white rounded-2xl shadow-sm border ${isActive ? 'border-[#FFB300]' : 'border-gray-100'} p-6 sm:p-7 h-full transition-all duration-300 ${isActive ? 'transform scale-105 shadow-md' : ''}`}>
-      <h3 className={`text-xl font-bold ${isActive ? 'text-[#FFB300]' : 'text-gray-800'} mb-5`}>{title}</h3>
+    <div className={`bg-white rounded-2xl shadow-sm border ${isActive ? 'border-[#008080]' : 'border-gray-100'} p-6 sm:p-7 h-full transition-all duration-300 ${isActive ? 'transform scale-105 shadow-md' : ''}`}>
+      <h3 className={`text-xl font-bold ${isActive ? 'text-[#008080]' : 'text-gray-800'} mb-5`}>{title}</h3>
       <div className="space-y-4">
         {items.map((item, index) => (
           <div key={index} className="flex items-start">
-            <div className={`${isActive ? 'text-[#FFB300]' : 'text-[#36C5B9]'} mr-2 flex-shrink-0 mt-0.5`}>
+            <div className={`${isActive ? 'text-[#008080]' : 'text-[#36C5B9]'} mr-2 flex-shrink-0 mt-0.5`}>
               <CheckCircle2 className="h-5 w-5" />
             </div>
             <p className="text-gray-600 text-sm sm:text-base">{item}</p>
@@ -68,74 +68,60 @@ const Journey = () => {
             Success Timeline
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-gray-900">
-            See Your <span className="text-[#FFB300]">30-Day Journey</span> to AI-Powered Support Success
+            See Your <span className="text-[#008080]">30-Day Journey</span> to AI-Powered Support Success
           </h2>
         </AnimatedCard>
 
-        {/* Timeline visualization */}
-        <div className="relative mx-auto max-w-4xl mb-12 md:mb-16">
-          <div className="bg-white rounded-2xl shadow-sm px-4 py-3 flex justify-between items-center mb-3">
-            <button 
+        {/* Timeline selection */}
+        <div className="flex justify-center items-center mb-10 sm:mb-14">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <button
               onClick={() => handleDayClick(0)}
-              className={`${activeDay === 0 ? 'bg-[#FFB300]/10 text-[#FFB300]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'} font-medium px-4 sm:px-6 py-1.5 sm:py-2 rounded-2xl text-sm sm:text-base transition-colors duration-300`}
+              className={`${activeDay === 0 ? 'bg-[#008080]/10 text-[#008080]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'} font-medium px-4 sm:px-6 py-1.5 sm:py-2 rounded-2xl text-sm sm:text-base transition-colors duration-300`}
             >
               Today
             </button>
-            <button 
+            <button
               onClick={() => handleDayClick(1)}
-              className={`${activeDay === 1 ? 'bg-[#FFB300]/10 text-[#FFB300]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'} font-medium px-4 sm:px-6 py-1.5 sm:py-2 rounded-2xl text-sm sm:text-base transition-colors duration-300`}
+              className={`${activeDay === 1 ? 'bg-[#008080]/10 text-[#008080]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'} font-medium px-4 sm:px-6 py-1.5 sm:py-2 rounded-2xl text-sm sm:text-base transition-colors duration-300`}
             >
               Day 5
             </button>
-            <button 
+            <button
               onClick={() => handleDayClick(2)}
-              className={`${activeDay === 2 ? 'bg-[#FFB300]/10 text-[#FFB300]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'} font-medium px-4 sm:px-6 py-1.5 sm:py-2 rounded-2xl text-sm sm:text-base transition-colors duration-300`}
+              className={`${activeDay === 2 ? 'bg-[#008080]/10 text-[#008080]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'} font-medium px-4 sm:px-6 py-1.5 sm:py-2 rounded-2xl text-sm sm:text-base transition-colors duration-300`}
             >
               Day 30
             </button>
           </div>
-          <div className="h-2 w-full bg-[#f1f1f1] rounded-full relative mt-5 mb-3">
-            {/* Timeline progress */}
+        </div>
+        
+        {/* Timeline visualization */}
+        <div className="relative mb-6 sm:mb-8 max-w-xl mx-auto">
+          <div className="relative h-2 bg-gray-200 rounded-full">
             <div 
-              className="absolute top-0 left-0 h-2 bg-[#FFB300] rounded-full transition-all duration-500"
-              style={{ 
-                width: activeDay === 0 ? '10%' : activeDay === 1 ? '50%' : '100%'
-              }}
+              className="absolute top-0 left-0 h-2 bg-[#008080] rounded-full transition-all duration-500"
+              style={{ width: `${(activeDay / 2) * 100}%` }}
             ></div>
             
-            {/* Clickable points */}
-            <button 
-              onClick={() => handleDayClick(0)}
-              className={`absolute top-1/2 left-[10%] transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-white ${activeDay === 0 ? 'bg-[#FFB300]' : 'bg-gray-300'} hover:bg-[#FFB300] transition-colors duration-300 cursor-pointer`}
-              title="Today"
-            ></button>
-            <button 
-              onClick={() => handleDayClick(1)}
-              className={`absolute top-1/2 left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-white ${activeDay === 1 ? 'bg-[#FFB300]' : 'bg-gray-300'} hover:bg-[#FFB300] transition-colors duration-300 cursor-pointer`}
-              title="Day 5"
-            ></button>
-            <button 
-              onClick={() => handleDayClick(2)}
-              className={`absolute top-1/2 left-[100%] transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-white ${activeDay === 2 ? 'bg-[#FFB300]' : 'bg-gray-300'} hover:bg-[#FFB300] transition-colors duration-300 cursor-pointer`}
-              title="Day 30"
-            ></button>
+            {/* Timeline points */}
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 w-4 h-4 rounded-full border-2 border-white ${activeDay === 0 ? 'bg-[#008080]' : 'bg-gray-300'} hover:bg-[#008080] transition-colors duration-300 cursor-pointer" onClick={() => handleDayClick(0)}></div>
+            
+            <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-white ${activeDay === 1 ? 'bg-[#008080]' : 'bg-gray-300'} hover:bg-[#008080] transition-colors duration-300 cursor-pointer" onClick={() => handleDayClick(1)}></div>
+            
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 w-4 h-4 rounded-full border-2 border-white ${activeDay === 2 ? 'bg-[#008080]' : 'bg-gray-300'} hover:bg-[#008080] transition-colors duration-300 cursor-pointer" onClick={() => handleDayClick(2)}></div>
           </div>
         </div>
-
-        {/* Journey items */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        
+        {/* Journey content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
           {journeyItems.map((item, index) => (
-            <AnimatedCard key={index} delay={index * 100}>
-              <JourneyItem 
-                title={item.title} 
-                items={item.items} 
-                isActive={
-                  (activeDay === 0 && index === 0) || 
-                  (activeDay === 1 && index === 1) || 
-                  (activeDay === 2 && index === 2)
-                }
-              />
-            </AnimatedCard>
+            <JourneyItem 
+              key={index}
+              title={item.title}
+              items={item.items}
+              isActive={index === activeDay}
+            />
           ))}
         </div>
       </div>

@@ -107,35 +107,35 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <a 
             href="#benefits" 
-            className={`font-medium transition-colors ${isActive('benefits') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium transition-colors ${isActive('benefits') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'benefits')}
           >
             Benefits
           </a>
           <a 
             href="#calculator" 
-            className={`font-medium transition-colors ${isActive('calculator') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium transition-colors ${isActive('calculator') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'calculator')}
           >
             Calculator
           </a>
           <a 
             href="#features" 
-            className={`font-medium transition-colors ${isActive('features') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium transition-colors ${isActive('features') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'features')}
           >
             Features
           </a>
           <a 
             href="#journey" 
-            className={`font-medium transition-colors ${isActive('journey') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium transition-colors ${isActive('journey') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'journey')}
           >
             Journey
           </a>
           <a 
             href="#cta" 
-            className="bg-[#FFB300] hover:bg-[#FFB300]/90 text-white px-4 py-2 rounded-full transition-colors"
+            className="bg-[#008080] hover:bg-[#008080]/90 text-white px-4 py-2 rounded-full transition-colors"
             onClick={(e) => handleNavClick(e, 'cta')}
           >
             Get Started
@@ -167,35 +167,35 @@ const Header = () => {
         <nav className="flex flex-col space-y-6 items-center">
           <a 
             href="#benefits" 
-            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('benefits') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('benefits') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'benefits')}
           >
             Benefits
           </a>
           <a 
             href="#calculator" 
-            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('calculator') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('calculator') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'calculator')}
           >
             Calculator
           </a>
           <a 
             href="#features" 
-            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('features') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('features') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'features')}
           >
             Features
           </a>
           <a 
             href="#journey" 
-            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('journey') ? 'text-[#FFB300]' : 'text-gray-800 hover:text-[#FFB300]'}`}
+            className={`font-medium text-lg w-full text-center py-2 transition-colors ${isActive('journey') ? 'text-[#008080]' : 'text-gray-800 hover:text-[#008080]'}`}
             onClick={(e) => handleNavClick(e, 'journey')}
           >
             Journey
           </a>
           <a
             href="#cta"
-            className="w-full mt-4 bg-[#FFB300] hover:bg-[#FFB300]/90 text-white py-3 rounded-full text-center font-medium"
+            className="w-full mt-4 bg-[#008080] hover:bg-[#008080]/90 text-white py-3 rounded-full text-center font-medium"
             onClick={(e) => handleNavClick(e, 'cta')}
           >
             Get Started

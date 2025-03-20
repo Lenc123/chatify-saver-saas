@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-gray-800 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,179,0,0.05),transparent)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,128,128,0.05),transparent)]"></div>
       
       <div className="container-custom relative z-10">
         <div className="pt-16 pb-8">
@@ -29,16 +29,16 @@ const Footer = () => {
                 Revolutionizing e-commerce customer support with AI-powered automation, saving time and costs while improving customer experience.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-500 hover:text-[#FFB300] transition-colors">
+                <a href="#" className="text-gray-500 hover:text-[#008080] transition-colors">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-[#FFB300] transition-colors">
+                <a href="#" className="text-gray-500 hover:text-[#008080] transition-colors">
                   <Twitter size={20} />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-[#FFB300] transition-colors">
+                <a href="#" className="text-gray-500 hover:text-[#008080] transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-[#FFB300] transition-colors">
+                <a href="#" className="text-gray-500 hover:text-[#008080] transition-colors">
                   <Linkedin size={20} />
                 </a>
               </div>
@@ -48,18 +48,18 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-6 text-gray-900">Contact Us</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <MapPin size={20} className="text-[#FFB300] mr-3 mt-1 flex-shrink-0" />
+                  <MapPin size={20} className="text-[#008080] mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-600">123 AI Boulevard, San Francisco, CA 94107</span>
                 </li>
                 <li className="flex items-center">
-                  <Mail size={20} className="text-[#FFB300] mr-3 flex-shrink-0" />
-                  <a href="mailto:info@unburdend.com" className="text-gray-600 hover:text-[#FFB300] transition-colors">
+                  <Mail size={20} className="text-[#008080] mr-3 flex-shrink-0" />
+                  <a href="mailto:info@unburdend.com" className="text-gray-600 hover:text-[#008080] transition-colors">
                     info@unburdend.com
                   </a>
                 </li>
                 <li className="flex items-center">
-                  <Phone size={20} className="text-[#FFB300] mr-3 flex-shrink-0" />
-                  <a href="tel:+386-40-210-905" className="text-gray-600 hover:text-[#FFB300] transition-colors">
+                  <Phone size={20} className="text-[#008080] mr-3 flex-shrink-0" />
+                  <a href="tel:+386-40-210-905" className="text-gray-600 hover:text-[#008080] transition-colors">
                   +386-40-210-905
                   </a>
                 </li>
@@ -73,13 +73,13 @@ const Footer = () => {
             © {currentYear} Unburdend. All rights reserved.
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-500 hover:text-[#FFB300] text-sm transition-colors">
+            <a href="#" className="text-gray-500 hover:text-[#008080] text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-500 hover:text-[#FFB300] text-sm transition-colors">
+            <a href="#" className="text-gray-500 hover:text-[#008080] text-sm transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-500 hover:text-[#FFB300] text-sm transition-colors">
+            <a href="#" className="text-gray-500 hover:text-[#008080] text-sm transition-colors">
               GDPR Compliance
             </a>
           </div>

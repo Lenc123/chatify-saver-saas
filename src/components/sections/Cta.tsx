@@ -5,8 +5,8 @@ import AnimatedCard from '@/components/ui/AnimatedCard';
 const Cta = () => {
   return (
     <section id="cta" className="py-24 bg-black text-white relative overflow-hidden">
-      <div className="absolute -top-24 right-0 w-64 h-64 rounded-full bg-[#FFB300] opacity-10 blur-2xl"></div>
-      <div className="absolute -bottom-32 -left-16 w-64 h-64 rounded-full bg-[#FFB300] opacity-10 blur-2xl"></div>
+      <div className="absolute -top-24 right-0 w-64 h-64 rounded-full bg-[#008080] opacity-10 blur-2xl"></div>
+      <div className="absolute -bottom-32 -left-16 w-64 h-64 rounded-full bg-[#008080] opacity-10 blur-2xl"></div>
       
       <div className="turso-container relative z-10">
         <AnimatedCard className="text-center max-w-3xl mx-auto">
@@ -17,7 +17,7 @@ const Cta = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
-              className="bg-[#FFB300] hover:bg-[#FFB300]/90 text-white rounded-md px-5 py-3 w-full sm:w-auto"
+              className="bg-[#008080] hover:bg-[#008080]/90 text-white rounded-md px-5 py-3 w-full sm:w-auto"
               size="lg"
             >
               Start Your Risk-Free Trial
